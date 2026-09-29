@@ -63,7 +63,7 @@ export const DayDetailsModal: React.FC<DayDetailsModalProps> = ({ item, horarioT
             <div className="p-4 rounded-[12px] bg-[#EEE7F9] border border-[#8C52FF]/20">
               <div className="flex items-center gap-2 text-[#8C52FF] font-bold text-base mb-1">
                 <Calendar className="w-5 h-5" />
-                Dia com Aula Confirmada
+                Aula
               </div>
               <p className="text-sm text-[#5D5F69] leading-relaxed">
                 Aula presencial regular de acordo com a escala da sua turma.

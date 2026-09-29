@@ -83,7 +83,7 @@ export const SelectorScreen: React.FC<SelectorScreenProps> = ({
         <div className="absolute bottom-0 right-10 w-24 h-24 rounded-tl-[40px] bg-[#FFFFFF]/5 pointer-events-none" />
 
         <div className="max-w-md mx-auto relative z-10 flex flex-col items-center text-center">
-          <Logo variant="white" className="h-10 mb-6" />
+          <Logo variant="white" className="mb-6" widthClass="w-[140px] sm:w-[180px]" />
           <span className="text-xs font-bold uppercase tracking-[0.05em] text-[#FEC13D] mb-1">
             Proz Educação
           </span>

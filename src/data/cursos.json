@@ -1,0 +1,439 @@
+{
+  "versao": "2026",
+  "regrasCertificados": {
+    "livre": "Vinculado a uma disciplina. É emitido ao término dela, somente com aprovação.",
+    "intermediario": "Vinculado à conclusão do módulo ou etapa correspondente.",
+    "emissao": "Você não precisa esperar o fim do curso: a secretaria solicita a emissão após o fechamento das notas."
+  },
+  "cursos": [
+    {
+      "id": "enfermagem",
+      "nomesNaBase": [
+        "Enfermagem"
+      ],
+      "titulo": "Técnico em Enfermagem",
+      "resumo": "Você vai se formar para cuidar de pessoas em todas as fases da vida, do posto de saúde à UTI. O técnico de enfermagem é o profissional que fica mais perto do paciente.",
+      "porRegional": {
+        "São Paulo": {
+          "cargaHoraria": "1840h",
+          "duracao": {
+            "semana": "26 meses",
+            "sabado": "34 meses"
+          }
+        },
+        "Minas Gerais": {
+          "cargaHoraria": "1680h",
+          "duracao": {
+            "semana": "24 meses",
+            "sabado": "25 meses"
+          }
+        }
+      },
+      "comoFunciona": "O curso tem duas etapas. Na Etapa Auxiliar, os 5 módulos são independentes: você pode entrar em qualquer um, e a ordem não muda sua formação. O Estágio Supervisionado I fecha essa etapa e libera o certificado de Auxiliar de Enfermagem. Na Etapa Complementação, mais 3 módulos e o Estágio Supervisionado II completam o técnico.",
+      "blocos": [
+        {
+          "titulo": "Etapa Auxiliar",
+          "modulos": [
+            {
+              "nome": "Enfermagem na Atenção à Saúde do Adulto",
+              "tipo": "modulo",
+              "aprende": "Os cuidados de enfermagem do dia a dia: sinais vitais, administração de medicamentos, curativos e acompanhamento de pacientes adultos.",
+              "mercado": "É a base do trabalho em hospitais, clínicas e unidades de saúde, e o que se espera que você domine desde o primeiro dia."
+            },
+            {
+              "nome": "Enfermagem na Clínica Cirúrgica e CME",
+              "tipo": "modulo",
+              "aprende": "O cuidado do paciente antes, durante e depois da cirurgia, a rotina do centro cirúrgico e o processamento de materiais na Central de Material e Esterilização (CME).",
+              "mercado": "Centro cirúrgico e CME existem em todo hospital e pedem profissionais que dominem técnica e protocolos de segurança.",
+              "certificadoId": "enf-instrumentacao"
+            },
+            {
+              "nome": "Enfermagem na Saúde Coletiva",
+              "tipo": "modulo",
+              "aprende": "Como funciona o SUS, vacinação, vigilância em saúde e ações de prevenção e educação na comunidade.",
+              "mercado": "Prepara você para atuar em UBS, campanhas de vacinação e programas de saúde da família."
+            },
+            {
+              "nome": "Enfermagem na Saúde da Mulher, do Homem, da Criança e do Adolescente",
+              "tipo": "modulo",
+              "aprende": "O cuidado em cada fase da vida: pré-natal, parto e pós-parto, saúde da criança e do adolescente e atenção à saúde do homem.",
+              "mercado": "Abre portas em maternidades, pediatria e ambulatórios, que valorizam quem sabe adaptar o cuidado a cada paciente."
+            },
+            {
+              "nome": "Enfermagem na Atenção Domiciliar",
+              "tipo": "modulo",
+              "aprende": "Como cuidar do paciente em casa com segurança, incluindo o cuidado da pessoa idosa e a orientação da família.",
+              "mercado": "O home care e o cuidado de idosos crescem junto com o envelhecimento da população brasileira.",
+              "certificadoId": "enf-cuidador"
+            },
+            {
+              "nome": "Estágio Supervisionado I",
+              "tipo": "estagio",
+              "aprende": "Você vai para um serviço de saúde colocar em prática o que aprendeu, acompanhado por um supervisor.",
+              "mercado": "É sua primeira experiência real na área, conta no currículo e fecha a etapa de Auxiliar de Enfermagem.",
+              "certificadoId": "enf-auxiliar"
+            }
+          ]
+        },
+        {
+          "titulo": "Etapa Complementação",
+          "modulos": [
+            {
+              "nome": "Assistência ao Paciente Crítico Adulto",
+              "tipo": "modulo",
+              "aprende": "Cuidados com pacientes graves em UTI e pronto-socorro: monitorização, suporte à vida e atendimento de urgência.",
+              "mercado": "UTI e emergência pedem técnicos que saibam agir com rapidez e segurança. É onde a formação técnica completa faz diferença."
+            },
+            {
+              "nome": "Assistência ao Paciente Crítico Neonatal e Pediátrico",
+              "tipo": "modulo",
+              "aprende": "O cuidado de recém-nascidos e crianças em estado grave, na UTI neonatal e pediátrica.",
+              "mercado": "É uma área especializada, com cuidados muito específicos, que valoriza quem chega com essa base."
+            },
+            {
+              "nome": "Enfermagem na Qualidade e Segurança do Paciente",
+              "tipo": "modulo",
+              "aprende": "Protocolos que evitam erros e infecções, registros de enfermagem e o uso de sistemas digitais na saúde.",
+              "mercado": "Hospitais com acreditação trabalham com esses protocolos todos os dias, e dominá-los coloca você à frente.",
+              "certificadoId": "enf-digitais"
+            },
+            {
+              "nome": "Estágio Supervisionado II",
+              "tipo": "estagio",
+              "aprende": "Prática supervisionada em áreas de maior complexidade, fechando sua formação técnica.",
+              "mercado": "Com ele concluído, você completa o caminho para o diploma de Técnico em Enfermagem."
+            }
+          ]
+        }
+      ],
+      "certificados": [
+        {
+          "id": "enf-cuidador",
+          "nome": "Cuidador de Idosos",
+          "tipo": "livre",
+          "cargaHoraria": {
+            "São Paulo": "75h",
+            "Minas Gerais": "75h"
+          },
+          "requisito": "Aprovação na disciplina Atenção Domiciliar do Adulto e do Idoso.",
+          "impacto": "Comprova sua preparação para cuidar de pessoas idosas em casa ou em instituições, uma frente de trabalho que você já pode explorar durante o curso."
+        },
+        {
+          "id": "enf-instrumentacao",
+          "nome": "Instrumentação Cirúrgica",
+          "tipo": "livre",
+          "cargaHoraria": {
+            "São Paulo": "75h",
+            "Minas Gerais": "75h"
+          },
+          "requisito": "Aprovação na disciplina Instrumentação Cirúrgica.",
+          "impacto": "Mostra que você conhece a rotina do centro cirúrgico e os instrumentais, um diferencial para quem quer atuar nessa área."
+        },
+        {
+          "id": "enf-digitais",
+          "nome": "Competências Digitais em Saúde",
+          "tipo": "livre",
+          "cargaHoraria": {
+            "São Paulo": "75h",
+            "Minas Gerais": "75h"
+          },
+          "requisito": "Aprovação na disciplina Competências Digitais em Saúde.",
+          "impacto": "Prontuário eletrônico e sistemas de gestão já fazem parte de qualquer serviço de saúde. Esse certificado mostra que você está pronto para eles."
+        },
+        {
+          "id": "enf-educorp",
+          "nome": "Educação Corporativa e Comportamental",
+          "tipo": "livre",
+          "cargaHoraria": {
+            "São Paulo": "20h",
+            "Minas Gerais": "20h"
+          },
+          "requisito": "Aprovação na disciplina Educação Corporativa e Comportamental.",
+          "impacto": "Comunicação, postura profissional e trabalho em equipe: competências que pesam em qualquer processo seletivo."
+        },
+        {
+          "id": "enf-auxiliar",
+          "nome": "Qualificação Profissional Técnica de Auxiliar de Enfermagem",
+          "tipo": "intermediario",
+          "cargaHoraria": {
+            "São Paulo": "1150h",
+            "Minas Gerais": "1030h"
+          },
+          "requisito": {
+            "São Paulo": "Conclusão dos 5 módulos da Etapa Auxiliar e de 400h de Estágio Supervisionado.",
+            "Minas Gerais": "Conclusão dos 5 módulos da Etapa Auxiliar e de 280h de Estágio Supervisionado."
+          },
+          "impacto": "É uma qualificação profissional: com ela, você pode solicitar a inscrição no COREN como Auxiliar de Enfermagem, conforme as regras do conselho, e começar a trabalhar na área enquanto conclui o técnico."
+        }
+      ],
+      "diploma": {
+        "nome": "Diploma de Técnico em Enfermagem",
+        "impacto": "Diploma com validade nacional. Com ele, você solicita a inscrição no COREN como Técnico de Enfermagem, exigida para atuar."
+      },
+      "nota": "Alunos matriculados antes da nova composição de certificados mantêm os 7 certificados da oferta vigente na data da matrícula. Em caso de dúvida, fale com a secretaria da sua unidade."
+    },
+    {
+      "id": "enfermagem-complementacao",
+      "nomesNaBase": [
+        "Enfermagem Complementação"
+      ],
+      "titulo": "Técnico em Enfermagem – Complementação",
+      "resumo": "Você já tem a base de Auxiliar de Enfermagem. Agora vai aprofundar o cuidado de pacientes graves e a segurança do paciente para se tornar Técnico em Enfermagem.",
+      "porRegional": {
+        "São Paulo": {
+          "duracao": {
+            "semana": "10 meses"
+          }
+        }
+      },
+      "comoFunciona": "São 3 módulos e o Estágio Supervisionado II. Ao concluir, você recebe o diploma de Técnico em Enfermagem.",
+      "blocos": [
+        {
+          "titulo": "Etapa Complementação",
+          "modulos": [
+            {
+              "nome": "Assistência ao Paciente Crítico Adulto",
+              "tipo": "modulo",
+              "aprende": "Cuidados com pacientes graves em UTI e pronto-socorro: monitorização, suporte à vida e atendimento de urgência.",
+              "mercado": "UTI e emergência pedem técnicos que saibam agir com rapidez e segurança. É onde a formação técnica completa faz diferença."
+            },
+            {
+              "nome": "Assistência ao Paciente Crítico Neonatal e Pediátrico",
+              "tipo": "modulo",
+              "aprende": "O cuidado de recém-nascidos e crianças em estado grave, na UTI neonatal e pediátrica.",
+              "mercado": "É uma área especializada, com cuidados muito específicos, que valoriza quem chega com essa base."
+            },
+            {
+              "nome": "Enfermagem na Qualidade e Segurança do Paciente",
+              "tipo": "modulo",
+              "aprende": "Protocolos que evitam erros e infecções, registros de enfermagem e o uso de sistemas digitais na saúde.",
+              "mercado": "Hospitais com acreditação trabalham com esses protocolos todos os dias, e dominá-los coloca você à frente.",
+              "certificadoId": "enf-digitais"
+            },
+            {
+              "nome": "Estágio Supervisionado II",
+              "tipo": "estagio",
+              "aprende": "Prática supervisionada em áreas de maior complexidade, fechando sua formação técnica.",
+              "mercado": "Com ele concluído, você completa o caminho para o diploma de Técnico em Enfermagem."
+            }
+          ]
+        }
+      ],
+      "certificados": [
+        {
+          "id": "enf-digitais",
+          "nome": "Competências Digitais em Saúde",
+          "tipo": "livre",
+          "cargaHoraria": {
+            "São Paulo": "75h",
+            "Minas Gerais": "75h"
+          },
+          "requisito": "Aprovação na disciplina Competências Digitais em Saúde.",
+          "impacto": "Prontuário eletrônico e sistemas de gestão já fazem parte de qualquer serviço de saúde. Esse certificado mostra que você está pronto para eles."
+        },
+        {
+          "id": "enf-educorp",
+          "nome": "Educação Corporativa e Comportamental",
+          "tipo": "livre",
+          "cargaHoraria": {
+            "São Paulo": "20h",
+            "Minas Gerais": "20h"
+          },
+          "requisito": "Aprovação na disciplina Educação Corporativa e Comportamental.",
+          "impacto": "Comunicação, postura profissional e trabalho em equipe: competências que pesam em qualquer processo seletivo."
+        }
+      ],
+      "diploma": {
+        "nome": "Diploma de Técnico em Enfermagem",
+        "impacto": "Diploma com validade nacional. Com ele, você solicita a inscrição no COREN como Técnico de Enfermagem, exigida para atuar."
+      },
+      "nota": "Alunos matriculados antes da nova composição de certificados mantêm os 7 certificados da oferta vigente na data da matrícula. Em caso de dúvida, fale com a secretaria da sua unidade."
+    },
+    {
+      "id": "radiologia",
+      "nomesNaBase": [
+        "Radiologia"
+      ],
+      "titulo": "Técnico em Radiologia",
+      "resumo": "Você vai aprender a realizar os exames de imagem que ajudam médicos a diagnosticar e tratar doenças, do raio-x à tomografia.",
+      "porRegional": {
+        "São Paulo": {
+          "cargaHoraria": "1600h",
+          "duracao": {
+            "semana": "24 meses"
+          }
+        },
+        "Minas Gerais": {
+          "cargaHoraria": "1600h",
+          "duracao": {
+            "semana": "24 meses"
+          }
+        }
+      },
+      "comoFunciona": "São 8 módulos independentes: você pode entrar em qualquer um, e a ordem não muda sua formação. Depois de concluir todos, vem o Estágio Supervisionado, obrigatório para o diploma.",
+      "blocos": [
+        {
+          "titulo": "Módulos",
+          "modulos": [
+            {
+              "nome": "Aplicações em Radiologia",
+              "tipo": "modulo",
+              "aprende": "Os fundamentos da profissão: como a imagem radiológica é formada, os equipamentos e as regras de proteção contra a radiação.",
+              "mercado": "Proteção radiológica é exigência em todo serviço de imagem. É a base de tudo o que vem depois."
+            },
+            {
+              "nome": "Técnicas Radiológicas do Tronco",
+              "tipo": "modulo",
+              "aprende": "Posicionamento e técnica para exames de tórax, abdome e coluna.",
+              "mercado": "Raio-x de tórax e de coluna faz parte da rotina de prontos-socorros, hospitais e clínicas."
+            },
+            {
+              "nome": "Técnicas Radiológicas dos Membros",
+              "tipo": "modulo",
+              "aprende": "Exames de braços, pernas, mãos e pés, muito comuns em ortopedia e em casos de trauma.",
+              "mercado": "É rotina diária em pronto-atendimentos e clínicas ortopédicas."
+            },
+            {
+              "nome": "Técnicas Radiológicas do Crânio",
+              "tipo": "modulo",
+              "aprende": "Exames da cabeça, da face e dos seios da face, que exigem posicionamento preciso.",
+              "mercado": "Precisão no posicionamento evita repetir o exame, e isso é muito valorizado pelas equipes."
+            },
+            {
+              "nome": "Diagnóstico e Terapia",
+              "tipo": "modulo",
+              "aprende": "Como a radiação é usada no diagnóstico e no tratamento de doenças, e o papel do técnico nessas equipes.",
+              "mercado": "Amplia sua atuação para além do raio-x convencional."
+            },
+            {
+              "nome": "Técnicas Tomográficas",
+              "tipo": "modulo",
+              "aprende": "Como funciona a tomografia computadorizada, o preparo do paciente e a realização do exame.",
+              "mercado": "A tomografia está presente em hospitais e centros de diagnóstico, e dominar o equipamento amplia suas oportunidades."
+            },
+            {
+              "nome": "Técnicas Radiológicas Específicas",
+              "tipo": "modulo",
+              "aprende": "Exames de maior complexidade, que exigem técnica e preparo específicos do paciente.",
+              "mercado": "Quem domina exames especiais se torna referência na equipe."
+            },
+            {
+              "nome": "Técnicas Radiológicas Complementares",
+              "tipo": "modulo",
+              "aprende": "Modalidades e rotinas que completam sua atuação em diferentes serviços de imagem.",
+              "mercado": "Mais versatilidade para trabalhar em hospitais, clínicas e outros serviços que usam radiação."
+            },
+            {
+              "nome": "Estágio Supervisionado",
+              "tipo": "estagio",
+              "aprende": "Prática em serviços de imagem, com supervisão, aplicando as técnicas do curso.",
+              "mercado": "É obrigatório para o diploma e sua primeira experiência real no setor."
+            }
+          ]
+        }
+      ],
+      "certificados": [],
+      "diploma": {
+        "nome": "Diploma de Técnico em Radiologia",
+        "impacto": "Diploma com validade nacional. Com ele, você solicita o registro no Conselho Regional de Técnicos em Radiologia (CRTR), exigido para atuar."
+      }
+    },
+    {
+      "id": "estetica",
+      "nomesNaBase": [
+        "Estética"
+      ],
+      "titulo": "Técnico em Estética",
+      "resumo": "Você vai aprender tratamentos faciais, corporais e terapias que cuidam da saúde, do bem-estar e da autoestima das pessoas.",
+      "porRegional": {
+        "São Paulo": {
+          "cargaHoraria": "1320h",
+          "duracao": {
+            "semana": "24 meses"
+          }
+        },
+        "Minas Gerais": {
+          "cargaHoraria": "1200h",
+          "duracao": {
+            "semana": "24 meses"
+          }
+        }
+      },
+      "comoFunciona": "São 8 módulos independentes: você pode entrar em qualquer um, e a ordem não muda sua formação.",
+      "blocos": [
+        {
+          "titulo": "Módulos",
+          "modulos": [
+            {
+              "nome": "Estética e Imagem Pessoal",
+              "tipo": "modulo",
+              "aprende": "Como a imagem pessoal se constrói e como fazer um atendimento de qualidade ao cliente.",
+              "mercado": "É a porta de entrada para salões, clínicas e para quem quer atender por conta própria."
+            },
+            {
+              "nome": "Visagismo, Harmonia e Estética",
+              "tipo": "modulo",
+              "aprende": "Como analisar o rosto e o estilo de cada pessoa para indicar maquiagem, cortes e procedimentos que valorizem seus traços.",
+              "mercado": "Um diferencial para clientes que buscam atendimento personalizado."
+            },
+            {
+              "nome": "Tratamentos Faciais",
+              "tipo": "modulo",
+              "aprende": "Avaliação da pele, limpeza, hidratação e tratamentos para acne, manchas e envelhecimento.",
+              "mercado": "A estética facial é um serviço recorrente, que fideliza clientes."
+            },
+            {
+              "nome": "Tratamentos Corporais",
+              "tipo": "modulo",
+              "aprende": "Procedimentos para gordura localizada, celulite, flacidez e cuidados no pós-operatório.",
+              "mercado": "Clínicas e spas buscam profissionais preparados para esses protocolos."
+            },
+            {
+              "nome": "Técnicas de Massagens",
+              "tipo": "modulo",
+              "aprende": "Massagem relaxante, modeladora e drenagem linfática, com técnica e segurança.",
+              "mercado": "São serviços muito procurados e que permitem atender também em domicílio."
+            },
+            {
+              "nome": "Depilação",
+              "tipo": "modulo",
+              "aprende": "Técnicas de depilação, cuidados com a pele e biossegurança.",
+              "mercado": "Serviço de demanda constante, ótimo para começar a atender e gerar renda."
+            },
+            {
+              "nome": "Terapias Específicas",
+              "tipo": "modulo",
+              "aprende": "Terapias voltadas a necessidades específicas da pele e do corpo, com uso de recursos e equipamentos.",
+              "mercado": "Amplia o tipo de tratamento que você pode oferecer."
+            },
+            {
+              "nome": "Terapias Complementares",
+              "tipo": "modulo",
+              "aprende": "Práticas que somam bem-estar aos tratamentos estéticos.",
+              "mercado": "Aumentam seu cardápio de serviços e o valor de cada atendimento."
+            }
+          ]
+        }
+      ],
+      "certificados": [
+        {
+          "id": "est-maquiador",
+          "nome": "Qualificação Profissional Técnica de Maquiador",
+          "tipo": "intermediario",
+          "regionais": [
+            "Minas Gerais"
+          ],
+          "cargaHoraria": {
+            "Minas Gerais": "300h"
+          },
+          "requisito": "Conclusão das disciplinas Educação Corporativa e Comportamental; Atendimento Humanizado e Boas Práticas em Estética; Nutrição e Métodos Avaliativos na Estética; Empreendedorismo e Inovação Sustentável; e Terapia Capilar.",
+          "impacto": "É uma qualificação profissional que permite atuar como maquiador(a) em salões, eventos e produções, já durante o curso."
+        }
+      ],
+      "diploma": {
+        "nome": "Diploma de Técnico em Estética",
+        "impacto": "Diploma com validade nacional. A profissão de Técnico em Estética é reconhecida por lei (Lei nº 13.643/2018)."
+      }
+    }
+  ]
+}

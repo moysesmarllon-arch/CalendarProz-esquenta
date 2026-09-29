@@ -1,49 +1,124 @@
 import React from 'react';
 
+/**
+ * =============================================================================
+ * LOGOTIPO OFICIAL PROZ EDUCAÇÃO
+ * =============================================================================
+ * Conforme anexo fornecido pelo usuário ("Adobe Express - file.png"):
+ * 
+ * 1. SÍMBOLO GEOMÉTRICO (à esquerda, largura 54px, altura 82px):
+ *    - Linha 1, Coluna 1: Círculo em Laranja (#FF7F00) representando a cabeça/figura.
+ *    - Linha 1, Coluna 2: Triângulo em Roxo Primário (#593493) com topo horizontal e diagonal.
+ *    - Linha 2, Coluna 1: Triângulo em Laranja (#FF7F00) com hipotenusa para cima.
+ *    - Linha 2, Coluna 2: Quadrante em Laranja (#FF7F00) com arco curvado.
+ *    - Linha 3, Coluna 1: Retângulo vertical em Laranja (#FF7F00) com cantos levemente arredondados.
+ *
+ * 2. TIPOGRAFIA / WORDMARK "Proz" (à direita, x: 70 a 274, y: 0 a 82):
+ *    - Letra 'P': Haste vertical e bojo arredondado bem proporcionado.
+ *    - Letra 'r': Haste com ombro/arco curvado moderno.
+ *    - Letra 'o': Círculo com espessura uniforme.
+ *    - Letra 'z': Barras horizontais superior e inferior (13px de espessura)
+ *                 conectadas por traço diagonal sólido, sem corte nem aparência de '7'.
+ *
+ * 3. VARIANTES DE COR:
+ *    - 'primary': Símbolo em Laranja (#FF7F00) e Roxo (#593493) + Wordmark em Roxo (#593493)
+ *                 (usado sobre fundos claros).
+ *    - 'white':   Todas as formas e letras em Branco (#FFFFFF)
+ *                 (usado sobre o gradiente primário).
+ *
+ * 4. PROPORÇÃO E ACESSIBILIDADE:
+ *    - Proporção exata 274 × 82 (aspect ratio ~3.34:1).
+ *    - Sem altura fixa, sem overflow:hidden, sem clip-path, com largura mínima de 80px.
+ *    - Renderização híbrida vetorial direta para máxima nitidez em qualquer tela retina/mobile.
+ * =============================================================================
+ */
+
 interface LogoProps {
   variant?: 'primary' | 'white';
   className?: string;
+  widthClass?: string;
 }
 
-export const Logo: React.FC<LogoProps> = ({ variant = 'primary', className = 'h-10' }) => {
+export const Logo: React.FC<LogoProps> = ({
+  variant = 'primary',
+  className = '',
+  widthClass = 'w-[140px] sm:w-[180px]',
+}) => {
   const isWhite = variant === 'white';
 
+  // Cores exatas da identidade visual da Proz Educação
+  const orangeColor = isWhite ? '#FFFFFF' : '#FF7F00';
+  const purpleColor = isWhite ? '#FFFFFF' : '#593493';
+
   return (
-    <div className={`inline-flex items-center min-w-[80px] select-none ${className}`}>
+    <div
+      className={`inline-block ${className}`}
+      style={{ minWidth: '80px' }}
+      title="Proz Educação"
+    >
+      {/* 
+        Renderização vetorial direta (SVG inline) baseada no anexo do Adobe Express.
+        Garante que o logo nunca fique em branco por falha de cache ou requisição.
+      */}
       <svg
-        viewBox="0 0 240 70"
-        className="w-full h-full max-h-12 object-contain"
+        viewBox="0 0 274 82"
+        className={`${widthClass} h-auto min-w-[80px] max-w-full block`}
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        aria-label="Logo Proz Educação"
         role="img"
+        aria-label="Logo Proz Educação"
       >
-        {/* Symbol / Icon */}
-        <g id="proz-symbol">
-          {/* Top-left: circle */}
-          <circle cx="16" cy="16" r="12" fill={isWhite ? '#FFFFFF' : '#FF7F00'} />
-          {/* Top-right: wedge */}
-          <path d="M30 4 L48 4 L30 26 Z" fill={isWhite ? '#FFFFFF' : '#593493'} />
-          {/* Mid-left: triangle */}
-          <path d="M4 32 L28 54 L4 54 Z" fill={isWhite ? '#FFFFFF' : '#FF7F00'} />
-          {/* Mid-right: rounded quadrant */}
-          <path d="M30 32 H46 C51 32 55 36 55 41 V54 H30 V32 Z" fill={isWhite ? '#FFFFFF' : '#FF7F00'} />
-          {/* Bottom-left: vertical block */}
-          <rect x="4" y="58" width="24" height="12" rx="2" fill={isWhite ? '#FFFFFF' : '#FF7F00'} />
+        {/* =======================================================
+            SÍMBOLO GEOMÉTRICO PROZ (ANEXO ADOBE EXPRESS)
+            ======================================================= */}
+        <g id="proz-icon">
+          {/* Círculo Laranja - Cabeça */}
+          <circle cx="13" cy="13" r="13" fill={orangeColor} />
+
+          {/* Triângulo Roxo - Detalhe superior direito */}
+          <path d="M 28,0 H 54 L 28,26 Z" fill={purpleColor} />
+
+          {/* Triângulo Laranja - Detalhe médio esquerdo */}
+          <path d="M 0,28 L 26,54 H 0 Z" fill={orangeColor} />
+
+          {/* Quadrante Laranja - Detalhe médio direito com arco */}
+          <path d="M 28,28 A 26 26 0 0 1 54,54 H 28 Z" fill={orangeColor} />
+
+          {/* Barra vertical Laranja - Base inferior esquerda */}
+          <rect x="0" y="56" width="26" height="26" rx="2" fill={orangeColor} />
         </g>
 
-        {/* Wordmark Proz */}
-        <g id="proz-wordmark" fill={isWhite ? '#FFFFFF' : '#593493'}>
-          {/* P */}
-          <path d="M72 68 V6 H96 C108 6 117 14 117 26 C117 38 108 46 96 46 H87 V68 H72 Z M87 34 H96 C100 34 103 31 103 26 C103 21 100 18 96 18 H87 V34 Z" />
-          {/* r */}
-          <path d="M125 68 V22 H138 V29 C141 24 146 22 153 22 V36 C143 36 138 41 138 52 V68 H125 Z" />
-          {/* o */}
-          <path d="M178 69 C164 69 154 58 154 45 C154 32 164 21 178 21 C192 21 202 32 202 45 C202 58 192 69 178 69 Z M178 57 C185 57 190 51 190 45 C190 39 185 33 178 33 C171 33 166 39 166 45 C166 51 171 57 178 57 Z" />
-          {/* z */}
-          <path d="M208 68 L229 34 H209 V22 H238 V33 L218 68 H239 V68 H208 Z" fillRule="evenodd" />
+        {/* =======================================================
+            WORDMARK "Proz" (ANEXO ADOBE EXPRESS)
+            ======================================================= */}
+        <g id="proz-letters" fill={purpleColor}>
+          {/* Letra 'P' */}
+          <path d="M 72,6 H 108 C 122,6 131,15 131,27 C 131,39 122,48 108,48 H 89 V 82 H 72 Z M 89,21 H 106 C 111,21 114,23.5 114,27 C 114,30.5 111,33 106,33 H 89 Z" />
+
+          {/* Letra 'r' */}
+          <path d="M 138,26 H 153 V 35.5 C 156.5,29.5 161.5,26 168.5,26 V 41.5 C 167,41.5 165.5,41.2 163.5,41.2 C 157.5,41.2 153,45.5 153,53 V 82 H 138 Z" />
+
+          {/* Letra 'o' */}
+          <path d="M 200,26 C 215.5,26 226,38 226,54 C 226,70 215.5,82 200,82 C 184.5,82 174,70 174,54 C 174,38 184.5,26 200,26 Z M 200,41 C 192.5,41 188.5,46.5 188.5,54 C 188.5,61.5 192.5,67 200,67 C 207.5,67 211.5,61.5 211.5,54 C 211.5,46.5 207.5,41 200,41 Z" />
+
+          {/* Letra 'z' completa (barra superior, diagonal precisa e barra inferior) */}
+          <path d="M 233,26 H 273 V 38.5 L 251.5,69.5 H 273 V 82 H 233 V 69.5 L 254.5,38.5 H 233 Z" />
         </g>
       </svg>
+
+      {/*
+        COMENTÁRIO DE CÓDIGO CONFORME SOLICITADO:
+        Caso prefira utilizar tags <img src="/logo-*.svg">, os arquivos também
+        estão salvos e sincronizados em public/logo-primario.svg e public/logo-mono-branco.svg:
+        
+        <img
+          src={isWhite ? "/logo-mono-branco.svg" : "/logo-primario.svg"}
+          alt="Proz Educação"
+          className={`${widthClass} h-auto min-w-[80px] block`}
+          width={274}
+          height={82}
+        />
+      */}
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Star, AlertTriangle, Coffee, BookOpen } from 'lucide-react';
 import { DayScheduleItem, parseLocalDate, formatLocalDateISO } from '../utils/schedule';
+import { CalendarLegend } from './CalendarLegend';
 
 interface CalendarMonthProps {
   year: number;
@@ -153,6 +154,9 @@ export const CalendarMonth: React.FC<CalendarMonthProps> = ({
           );
         })}
       </div>
+
+      {/* Legenda compacta logo abaixo da grade do mês */}
+      <CalendarLegend variant="compact" />
     </div>
   );
 };

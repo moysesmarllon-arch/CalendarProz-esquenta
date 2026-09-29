@@ -71,7 +71,7 @@ export default function App() {
       });
 
       // Update URL search params
-      const params = new URLSearchParams();
+      const params = new URLSearchParams(window.location.search);
       params.set('regional', turma.regional);
       params.set('unidade', turma.unidade);
       params.set('curso', turma.curso);

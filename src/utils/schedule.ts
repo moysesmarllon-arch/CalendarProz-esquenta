@@ -175,7 +175,7 @@ export function calculateTurmaSchedule(
           yearNumber: curPeriod.getFullYear(),
           dayOfWeek: dow,
           type: 'aula',
-          title: 'Aula confirmada',
+          title: 'Aula',
           isToday,
           isPast,
         };

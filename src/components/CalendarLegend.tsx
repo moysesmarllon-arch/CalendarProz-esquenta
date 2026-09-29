@@ -1,7 +1,47 @@
 import React from 'react';
 import { Star, BookOpen, Coffee, AlertTriangle, Lock, Calendar } from 'lucide-react';
 
-export const CalendarLegend: React.FC = () => {
+interface CalendarLegendProps {
+  variant?: 'full' | 'compact';
+}
+
+export const CalendarLegend: React.FC<CalendarLegendProps> = ({ variant = 'full' }) => {
+  if (variant === 'compact') {
+    return (
+      <div className="mt-3 pt-3 border-t border-[#EFEFEF] flex flex-wrap items-center gap-1.5 sm:gap-2 text-[11px] text-[#5D5F69]">
+        {/* Aula Inaugural */}
+        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-[6px] bg-[#FFF3E5] border border-[#FF7F00]/20 font-bold text-[#FF7F00]">
+          <Star className="w-3 h-3 fill-[#FF7F00]" />
+          Aula Inaugural
+        </span>
+
+        {/* Aula */}
+        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-[6px] bg-[#EEE7F9] border border-[#8C52FF]/20 font-bold text-[#8C52FF]">
+          <BookOpen className="w-3 h-3" />
+          Aula
+        </span>
+
+        {/* Confirme c/ unidade */}
+        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-[6px] bg-[#FFF3E5] border border-[#FEC13D] font-bold text-[#131313]">
+          <AlertTriangle className="w-3 h-3 text-[#FF7F00]" />
+          Confirme c/ Unidade
+        </span>
+
+        {/* Feriado / Sem aula */}
+        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-[6px] bg-[#EFEFEF] border border-[#B1B3BB]/30 font-medium text-[#5D5F69]">
+          <Coffee className="w-3 h-3" />
+          Feriado / Sem aula
+        </span>
+
+        {/* Hoje */}
+        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-[6px] bg-[#FFFFFF] border border-[#593493] font-bold text-[#593493]">
+          <Calendar className="w-3 h-3" />
+          Hoje
+        </span>
+      </div>
+    );
+  }
+
   return (
     <div className="bg-[#FFFFFF] rounded-[16px] border border-[#EFEFEF] card-shadow p-4 sm:p-5 mb-6">
       <h3 className="text-xs font-bold uppercase tracking-[0.05em] text-[#FF7F00] mb-3">
@@ -20,13 +60,13 @@ export const CalendarLegend: React.FC = () => {
           </div>
         </div>
 
-        {/* Aula Regular */}
+        {/* Aula */}
         <div className="flex items-center gap-2 p-2 rounded-[10px] bg-[#EEE7F9] border border-[#8C52FF]/20">
           <div className="w-6 h-6 rounded-[8px] bg-[#8C52FF] text-[#FFFFFF] flex items-center justify-center shrink-0">
             <BookOpen className="w-3.5 h-3.5" />
           </div>
           <div>
-            <div className="font-bold text-[#131313]">Aula Confirmada</div>
+            <div className="font-bold text-[#131313]">Aula</div>
             <div className="text-[10px] text-[#5D5F69]">Escala da turma</div>
           </div>
         </div>
