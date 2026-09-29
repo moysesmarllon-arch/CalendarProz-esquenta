@@ -1,0 +1,111 @@
+{
+  "versao": "2026-out-nov",
+  "periodoVisivel": {
+    "inicio": "2026-10-01",
+    "fim": "2026-11-30",
+    "mesesEmBreve": [
+      "2026-12"
+    ]
+  },
+  "horarios": {
+    "M": "08:00",
+    "T": "14:00",
+    "N": "19:00",
+    "S": "08:00"
+  },
+  "whatsapp": "553182357943",
+  "diasSemAula": [
+    {
+      "data": "2026-10-12",
+      "nome": "Nossa Senhora Aparecida",
+      "tipo": "feriado_nacional"
+    },
+    {
+      "data": "2026-10-13",
+      "nome": "Dia do Professor",
+      "tipo": "dia_sem_aula_proz"
+    },
+    {
+      "data": "2026-11-02",
+      "nome": "Finados",
+      "tipo": "feriado_nacional"
+    },
+    {
+      "data": "2026-11-15",
+      "nome": "Proclamação da República",
+      "tipo": "feriado_nacional"
+    },
+    {
+      "data": "2026-11-20",
+      "nome": "Dia Nacional de Zumbi e da Consciência Negra",
+      "tipo": "feriado_nacional"
+    }
+  ],
+  "confirmarComUnidade": [],
+  "turmas": [
+    {
+      "regional": "São Paulo",
+      "unidade": "Carapicuíba",
+      "curso": "Estética",
+      "turno": "M",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-08"
+    },
+    {
+      "regional": "São Paulo",
+      "unidade": "Carapicuíba",
+      "curso": "Enfermagem",
+      "turno": "M",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-16"
+    },
+    {
+      "regional": "São Paulo",
+      "unidade": "Carapicuíba",
+      "curso": "Enfermagem",
+      "turno": "T",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-19"
+    },
+    {
+      "regional": "São Paulo",
+      "unidade": "Carapicuíba",
+      "curso": "Enfermagem",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-19"
+    },
+    {
+      "regional": "Minas Gerais",
+      "unidade": "Divinopolis",
+      "curso": "Enfermagem Complementação",
+      "turno": "M",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-20"
+    },
+    {
+      "regional": "Minas Gerais",
+      "unidade": "Divinopolis",
+      "curso": "Enfermagem Complementação",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-20"
+    },
+    {
+      "regional": "Minas Gerais",
+      "unidade": "Divinopolis",
+      "curso": "Radiologia",
+      "turno": "M",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-09"
+    },
+    {
+      "regional": "Minas Gerais",
+      "unidade": "Divinopolis",
+      "curso": "Radiologia",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-09"
+    }
+  ]
+}

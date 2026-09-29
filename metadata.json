@@ -1,0 +1,6 @@
+{
+  "name": "Calendário de Aulas Proz",
+  "description": "Calendário oficial de aulas da Proz Educação para turmas de outubro e novembro de 2026.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

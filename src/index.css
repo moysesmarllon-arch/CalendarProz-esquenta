@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-purple-primary: #593493;
+    --color-purple-vibrant: #8C52FF;
+    --color-orange: #FF7F00;
+    --color-yellow: #FEC13D;
+    --color-green: #D3F95C;
+    --color-black: #131313;
+    --color-gray-dark: #5D5F69;
+    --color-gray-medium: #B1B3BB;
+    --color-gray-light: #EFEFEF;
+    --color-purple-light: #EEE7F9;
+    --color-white: #FFFFFF;
+  }
+
+  body {
+    font-family: 'Satoshi', Arial, sans-serif;
+    color: #131313;
+    background: linear-gradient(180deg, #F3EDF9 0%, #FFF3E5 100%);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  * {
+    font-family: 'Satoshi', Arial, sans-serif;
+  }
+}
+
+.gradient-primary {
+  background: linear-gradient(135deg, #FF7F00 0%, #8C52FF 50%, #593493 100%);
+}
+
+.gradient-bg {
+  background: linear-gradient(180deg, #F3EDF9 0%, #FFF3E5 100%);
+}
+
+.card-shadow {
+  box-shadow: 0 10px 30px rgba(89, 52, 147, 0.08);
+}
