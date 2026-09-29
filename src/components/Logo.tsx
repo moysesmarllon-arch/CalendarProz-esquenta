@@ -1,40 +1,34 @@
 import React from 'react';
 
 /**
- * =============================================================================
- * LOGOTIPO OFICIAL PROZ EDUCAÇÃO
- * =============================================================================
- * Conforme anexo fornecido pelo usuário ("Adobe Express - file.png"):
- * 
- * 1. SÍMBOLO GEOMÉTRICO (à esquerda, largura 54px, altura 82px):
- *    - Linha 1, Coluna 1: Círculo em Laranja (#FF7F00) representando a cabeça/figura.
- *    - Linha 1, Coluna 2: Triângulo em Roxo Primário (#593493) com topo horizontal e diagonal.
- *    - Linha 2, Coluna 1: Triângulo em Laranja (#FF7F00) com hipotenusa para cima.
- *    - Linha 2, Coluna 2: Quadrante em Laranja (#FF7F00) com arco curvado.
- *    - Linha 3, Coluna 1: Retângulo vertical em Laranja (#FF7F00) com cantos levemente arredondados.
+ * LOGO OFICIAL PROZ EDUCAÇÃO — NÃO ALTERAR.
  *
- * 2. TIPOGRAFIA / WORDMARK "Proz" (à direita, x: 70 a 274, y: 0 a 82):
- *    - Letra 'P': Haste vertical e bojo arredondado bem proporcionado.
- *    - Letra 'r': Haste com ombro/arco curvado moderno.
- *    - Letra 'o': Círculo com espessura uniforme.
- *    - Letra 'z': Barras horizontais superior e inferior (13px de espessura)
- *                 conectadas por traço diagonal sólido, sem corte nem aparência de '7'.
+ * Os paths abaixo foram copiados sem nenhuma modificação do arquivo oficial
+ * da marca (logo-primario.svg, 274 × 82). Não redesenhe, não simplifique,
+ * não recrie as formas e não troque este componente por uma versão feita à mão.
+ * Para mudar tamanho, use só a prop widthClass (a altura acompanha sozinha).
  *
- * 3. VARIANTES DE COR:
- *    - 'primary': Símbolo em Laranja (#FF7F00) e Roxo (#593493) + Wordmark em Roxo (#593493)
- *                 (usado sobre fundos claros).
- *    - 'white':   Todas as formas e letras em Branco (#FFFFFF)
- *                 (usado sobre o gradiente primário).
- *
- * 4. PROPORÇÃO E ACESSIBILIDADE:
- *    - Proporção exata 274 × 82 (aspect ratio ~3.34:1).
- *    - Sem altura fixa, sem overflow:hidden, sem clip-path, com largura mínima de 80px.
- *    - Renderização híbrida vetorial direta para máxima nitidez em qualquer tela retina/mobile.
- * =============================================================================
+ * Variantes (todas oficiais):
+ * - primary: fundos claros. Wordmark e triângulo roxos, símbolo laranja (logo-primario.svg).
+ * - white:   fundos escuros ou gradiente. Wordmark e triângulo brancos, símbolo laranja
+ *            (logo-secundario-1.svg).
+ * - mono:    tudo branco (logo-mono-branco.svg), só quando o laranja não tiver contraste.
  */
 
+const PATHS: { color: 'purple' | 'orange'; d: string }[] = [
+  { color: 'purple', d: 'M129.414 31.6652C129.414 51.8103 122.12 55.8917 100.528 55.8917H88.3012V80.3031C88.3012 81.5968 88.0119 81.9049 86.8242 81.9049H74.3076C73.1199 81.9049 72.8306 81.6122 72.8306 80.3031V8.53215C72.8306 7.43865 73.1199 7.23843 74.3076 7.13062C82.987 6.32974 92.4429 6.03711 100.528 6.03711C122.12 6.03711 129.414 11.7203 129.414 31.6652ZM88.3164 19.6982V43.8324H98.9601C110.685 43.8324 113.745 42.2306 113.745 32.0656C113.745 21.9006 110.685 19.6982 98.9601 19.6982H88.3164Z' },
+  { color: 'purple', d: 'M165.441 26.6597C166.522 26.9523 167.025 27.3528 167.025 28.6465V36.8247C167.025 37.8258 166.431 38.3186 165.35 38.3186H156.077C150.945 38.3186 149.179 39.1195 149.179 43.4011V80.2877C149.179 81.3812 148.692 81.8894 147.702 81.8894H135.977C134.987 81.8894 134.5 81.3966 134.5 80.2877V39.6123C134.5 27.0447 143.377 25.5508 152.346 25.5508C155.209 25.5508 162 25.8434 165.456 26.6443' },
+  { color: 'purple', d: 'M220.746 53.4734C220.746 76.206 216.117 81.8891 195.606 81.8891C175.095 81.8891 170.466 76.206 170.466 53.4734C170.466 30.7408 175.202 25.0576 195.606 25.0576C216.01 25.0576 220.746 30.633 220.746 53.4734ZM185.16 53.4734C185.16 66.041 186.637 69.1213 195.606 69.1213C204.575 69.1213 206.158 66.0256 206.158 53.4734C206.158 40.9212 204.681 37.8255 195.606 37.8255C186.531 37.8255 185.16 40.9212 185.16 53.4734Z' },
+  { color: 'purple', d: 'M269.746 26.0596C270.827 26.0596 271.421 26.5524 271.421 27.5535V34.3302C271.421 35.1311 271.116 35.6239 270.736 36.2246L246.494 69.1221H271.04C272.121 69.1221 272.715 69.615 272.715 70.6161V80.2882C272.715 81.3817 272.121 81.89 271.04 81.89H227.08C225.892 81.89 225.298 81.3971 225.298 80.2882V73.8042C225.298 73.1111 225.496 72.6029 225.984 71.9098L251.017 38.5194H228.146C226.958 38.5194 226.471 38.0265 226.471 37.0254V27.5535C226.471 26.5524 226.958 26.0596 228.146 26.0596H269.746Z' },
+  { color: 'purple', d: 'M31.0324 0.246179L50.9645 11.8897C52.1826 12.5982 52.1826 14.3848 50.9645 15.0932L31.0324 26.7367C29.8142 27.4452 28.2915 26.5519 28.2915 25.135V1.86334C28.2915 0.430997 29.8142 -0.462289 31.0324 0.261581' },
+  { color: 'orange', d: 'M23.8606 54.445H2.49716C1.47695 54.445 0.669922 53.6133 0.669922 52.5968V30.9885C0.669922 29.3405 2.64943 28.5089 3.80668 29.6794L25.1701 51.2877C26.3274 52.4582 25.5051 54.4604 23.8759 54.4604' },
+  { color: 'orange', d: 'M23.8607 81.8904H2.48202C1.47704 81.8904 0.654785 81.0587 0.654785 80.0422V58.4185C0.654785 57.402 1.47704 56.5703 2.48202 56.5703H23.8607C24.8657 56.5703 25.688 57.402 25.688 58.4185V80.0422C25.688 81.0587 24.8657 81.8904 23.8607 81.8904Z' },
+  { color: 'orange', d: 'M13.1713 26.8299C5.89284 26.8299 0 20.8541 0 13.4922C0 6.1303 5.89284 0.169922 13.1713 0.169922C20.4498 0.169922 26.3427 6.1303 26.3427 13.4922C26.3427 20.8541 20.4498 26.8145 13.1713 26.8145' },
+  { color: 'orange', d: 'M29.7533 54.4439C42.0415 53.4736 51.8629 43.555 52.8222 31.1106C52.8984 30.0325 52.0609 29.1084 50.9798 29.1084H29.6163C28.6113 29.1084 27.7891 29.9401 27.7891 30.9566V52.5649C27.7891 53.643 28.7027 54.5055 29.7686 54.4285' },
+];
+
 interface LogoProps {
-  variant?: 'primary' | 'white';
+  variant?: 'primary' | 'white' | 'mono';
   className?: string;
   widthClass?: string;
 }
@@ -44,81 +38,27 @@ export const Logo: React.FC<LogoProps> = ({
   className = '',
   widthClass = 'w-[140px] sm:w-[180px]',
 }) => {
-  const isWhite = variant === 'white';
-
-  // Cores exatas da identidade visual da Proz Educação
-  const orangeColor = isWhite ? '#FFFFFF' : '#FF7F00';
-  const purpleColor = isWhite ? '#FFFFFF' : '#593493';
+  const colors =
+    variant === 'white'
+      ? { purple: '#FFFFFF', orange: '#FF7F00' }
+      : variant === 'mono'
+      ? { purple: '#FFFFFF', orange: '#FFFFFF' }
+      : { purple: '#593493', orange: '#FF7F00' };
 
   return (
-    <div
-      className={`inline-block ${className}`}
-      style={{ minWidth: '80px' }}
-      title="Proz Educação"
-    >
-      {/* 
-        Renderização vetorial direta (SVG inline) baseada no anexo do Adobe Express.
-        Garante que o logo nunca fique em branco por falha de cache ou requisição.
-      */}
+    <div className={`inline-block shrink-0 ${className}`}>
       <svg
         viewBox="0 0 274 82"
-        className={`${widthClass} h-auto min-w-[80px] max-w-full block`}
+        className={`${widthClass} min-w-[80px] h-auto block`}
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         role="img"
-        aria-label="Logo Proz Educação"
+        aria-label="Proz Educação"
       >
-        {/* =======================================================
-            SÍMBOLO GEOMÉTRICO PROZ (ANEXO ADOBE EXPRESS)
-            ======================================================= */}
-        <g id="proz-icon">
-          {/* Círculo Laranja - Cabeça */}
-          <circle cx="13" cy="13" r="13" fill={orangeColor} />
-
-          {/* Triângulo Roxo - Detalhe superior direito */}
-          <path d="M 28,0 H 54 L 28,26 Z" fill={purpleColor} />
-
-          {/* Triângulo Laranja - Detalhe médio esquerdo */}
-          <path d="M 0,28 L 26,54 H 0 Z" fill={orangeColor} />
-
-          {/* Quadrante Laranja - Detalhe médio direito com arco */}
-          <path d="M 28,28 A 26 26 0 0 1 54,54 H 28 Z" fill={orangeColor} />
-
-          {/* Barra vertical Laranja - Base inferior esquerda */}
-          <rect x="0" y="56" width="26" height="26" rx="2" fill={orangeColor} />
-        </g>
-
-        {/* =======================================================
-            WORDMARK "Proz" (ANEXO ADOBE EXPRESS)
-            ======================================================= */}
-        <g id="proz-letters" fill={purpleColor}>
-          {/* Letra 'P' */}
-          <path d="M 72,6 H 108 C 122,6 131,15 131,27 C 131,39 122,48 108,48 H 89 V 82 H 72 Z M 89,21 H 106 C 111,21 114,23.5 114,27 C 114,30.5 111,33 106,33 H 89 Z" />
-
-          {/* Letra 'r' */}
-          <path d="M 138,26 H 153 V 35.5 C 156.5,29.5 161.5,26 168.5,26 V 41.5 C 167,41.5 165.5,41.2 163.5,41.2 C 157.5,41.2 153,45.5 153,53 V 82 H 138 Z" />
-
-          {/* Letra 'o' */}
-          <path d="M 200,26 C 215.5,26 226,38 226,54 C 226,70 215.5,82 200,82 C 184.5,82 174,70 174,54 C 174,38 184.5,26 200,26 Z M 200,41 C 192.5,41 188.5,46.5 188.5,54 C 188.5,61.5 192.5,67 200,67 C 207.5,67 211.5,61.5 211.5,54 C 211.5,46.5 207.5,41 200,41 Z" />
-
-          {/* Letra 'z' completa (barra superior, diagonal precisa e barra inferior) */}
-          <path d="M 233,26 H 273 V 38.5 L 251.5,69.5 H 273 V 82 H 233 V 69.5 L 254.5,38.5 H 233 Z" />
-        </g>
+        {PATHS.map((p, i) => (
+          <path key={i} d={p.d} fill={colors[p.color]} />
+        ))}
       </svg>
-
-      {/*
-        COMENTÁRIO DE CÓDIGO CONFORME SOLICITADO:
-        Caso prefira utilizar tags <img src="/logo-*.svg">, os arquivos também
-        estão salvos e sincronizados em public/logo-primario.svg e public/logo-mono-branco.svg:
-        
-        <img
-          src={isWhite ? "/logo-mono-branco.svg" : "/logo-primario.svg"}
-          alt="Proz Educação"
-          className={`${widthClass} h-auto min-w-[80px] block`}
-          width={274}
-          height={82}
-        />
-      */}
     </div>
   );
 };

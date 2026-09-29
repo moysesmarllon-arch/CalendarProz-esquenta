@@ -85,42 +85,57 @@ export const CursoTab: React.FC<CursoTabProps> = ({ turma }) => {
           {curso.resumo}
         </p>
 
-        {/* Três Números em Destaque */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-4 border-t border-[#EFEFEF]">
-          {duracao && (
-            <div className="p-4 rounded-[14px] bg-[#EEE7F9]/50 border border-[#8C52FF]/15">
-              <span className="text-[11px] font-bold uppercase tracking-[0.05em] text-[#593493] flex items-center gap-1 mb-1">
-                <Clock className="w-3.5 h-3.5 text-[#8C52FF]" />
-                Duração estimada
-              </span>
-              <div className="text-2xl font-bold text-[#8C52FF]">
-                {duracao}
-              </div>
-            </div>
-          )}
+        {/* Números em Destaque (Duração, Carga horária e Certificados) */}
+        {(() => {
+          const hasCertificados = totalCertificados > 0;
+          const count = [Boolean(duracao), Boolean(cargaHoraria), hasCertificados].filter(Boolean).length;
+          const gridColsClass =
+            count === 3
+              ? 'grid-cols-1 sm:grid-cols-3'
+              : count === 2
+              ? 'grid-cols-1 sm:grid-cols-2'
+              : 'grid-cols-1';
 
-          {cargaHoraria && (
-            <div className="p-4 rounded-[14px] bg-[#EEE7F9]/50 border border-[#8C52FF]/15">
-              <span className="text-[11px] font-bold uppercase tracking-[0.05em] text-[#593493] flex items-center gap-1 mb-1">
-                <Layers className="w-3.5 h-3.5 text-[#8C52FF]" />
-                Carga horária
-              </span>
-              <div className="text-2xl font-bold text-[#8C52FF]">
-                {cargaHoraria}
-              </div>
-            </div>
-          )}
+          return (
+            <div className={`grid ${gridColsClass} gap-3 pt-4 border-t border-[#EFEFEF]`}>
+              {duracao && (
+                <div className="p-4 rounded-[14px] bg-[#EEE7F9]/50 border border-[#8C52FF]/15">
+                  <span className="text-[11px] font-bold uppercase tracking-[0.05em] text-[#593493] flex items-center gap-1 mb-1">
+                    <Clock className="w-3.5 h-3.5 text-[#8C52FF]" />
+                    Duração estimada
+                  </span>
+                  <div className="text-2xl font-bold text-[#8C52FF]">
+                    {duracao}
+                  </div>
+                </div>
+              )}
 
-          <div className="p-4 rounded-[14px] bg-[#EEE7F9]/50 border border-[#8C52FF]/15">
-            <span className="text-[11px] font-bold uppercase tracking-[0.05em] text-[#593493] flex items-center gap-1 mb-1">
-              <Award className="w-3.5 h-3.5 text-[#8C52FF]" />
-              Certificados
-            </span>
-            <div className="text-2xl font-bold text-[#8C52FF]">
-              {totalCertificados} {totalCertificados === 1 ? 'certificado' : 'certificados'}
+              {cargaHoraria && (
+                <div className="p-4 rounded-[14px] bg-[#EEE7F9]/50 border border-[#8C52FF]/15">
+                  <span className="text-[11px] font-bold uppercase tracking-[0.05em] text-[#593493] flex items-center gap-1 mb-1">
+                    <Layers className="w-3.5 h-3.5 text-[#8C52FF]" />
+                    Carga horária
+                  </span>
+                  <div className="text-2xl font-bold text-[#8C52FF]">
+                    {cargaHoraria}
+                  </div>
+                </div>
+              )}
+
+              {hasCertificados && (
+                <div className="p-4 rounded-[14px] bg-[#EEE7F9]/50 border border-[#8C52FF]/15">
+                  <span className="text-[11px] font-bold uppercase tracking-[0.05em] text-[#593493] flex items-center gap-1 mb-1">
+                    <Award className="w-3.5 h-3.5 text-[#8C52FF]" />
+                    Certificados
+                  </span>
+                  <div className="text-2xl font-bold text-[#8C52FF]">
+                    {totalCertificados} {totalCertificados === 1 ? 'certificado' : 'certificados'}
+                  </div>
+                </div>
+              )}
             </div>
-          </div>
-        </div>
+          );
+        })()}
       </section>
 
       {/* 2. COMO FUNCIONA */}
