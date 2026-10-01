@@ -193,10 +193,15 @@ export const SelectorScreen: React.FC<SelectorScreenProps> = ({
                 </option>
                 {cursos.map((c) => (
                   <option key={c} value={c}>
-                    {c}
+                    {repository.getCursoOptionLabel(c)}
                   </option>
                 ))}
               </select>
+              {unidade && repository.hasBothEnfermagemCourses(cursos) && (
+                <p className="mt-1.5 text-xs text-[#5D5F69] leading-relaxed">
+                  Já tem a qualificação de Auxiliar de Enfermagem? Escolha Enfermagem Complementação. Se está começando agora, escolha Enfermagem.
+                </p>
+              )}
             </div>
 
             {/* 4. Turno */}

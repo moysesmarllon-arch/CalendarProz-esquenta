@@ -171,15 +171,19 @@
         "nome": "Diploma de Técnico em Enfermagem",
         "impacto": "É o objetivo do seu curso. Diploma com validade nacional, que permite solicitar a inscrição no COREN como Técnico de Enfermagem. Com ele, você pode assumir cuidados de maior complexidade, como a assistência a pacientes graves em UTI e urgência, que a legislação reserva ao técnico e ao enfermeiro."
       },
-      "nota": "Alunos matriculados antes da nova composição de certificados mantêm os 7 certificados da oferta vigente na data da matrícula. Em caso de dúvida, fale com a secretaria da sua unidade."
+      "nota": "Alunos matriculados antes da nova composição de certificados mantêm os 7 certificados da oferta vigente na data da matrícula. Em caso de dúvida, fale com a secretaria da sua unidade.",
+      "seletor": {
+        "descricao": "Estou começando agora"
+      },
+      "subtitulo": "Para quem está começando agora"
     },
     {
       "id": "enfermagem-complementacao",
       "nomesNaBase": [
         "Enfermagem Complementação"
       ],
-      "titulo": "Técnico em Enfermagem",
-      "resumo": "Esta é a parte que completa sua formação e leva ao diploma de Técnico em Enfermagem: o cuidado de pacientes graves, da UTI à urgência, e a segurança do paciente.",
+      "titulo": "Técnico em Enfermagem – Complementação",
+      "resumo": "Você já é Auxiliar de Enfermagem. Agora vai completar sua formação e conquistar o diploma de Técnico em Enfermagem, aprendendo o cuidado de pacientes graves, da UTI à urgência, e a segurança do paciente.",
       "porRegional": {
         "São Paulo": {
           "duracao": {
@@ -187,10 +191,10 @@
           }
         }
       },
-      "comoFunciona": "Seu curso é o Técnico em Enfermagem, e esta é a 2ª parte dele. São 3 módulos e o Estágio Supervisionado II. Ao concluir, você recebe o diploma de Técnico, o objetivo da sua formação.",
+      "comoFunciona": "A Complementação é para quem já tem a qualificação de Auxiliar de Enfermagem. São 3 módulos e o Estágio Supervisionado II. Ao concluir, você recebe o diploma de Técnico em Enfermagem, o objetivo da sua formação.",
       "blocos": [
         {
-          "titulo": "2ª parte do técnico · Cuidado de alta complexidade",
+          "titulo": "Complementação · Cuidado de alta complexidade",
           "modulos": [
             {
               "nome": "Assistência ao Paciente Crítico Adulto",
@@ -249,7 +253,10 @@
         "impacto": "É o objetivo do seu curso. Diploma com validade nacional, que permite solicitar a inscrição no COREN como Técnico de Enfermagem. Com ele, você pode assumir cuidados de maior complexidade, como a assistência a pacientes graves em UTI e urgência, que a legislação reserva ao técnico e ao enfermeiro."
       },
       "nota": "Alunos matriculados antes da nova composição de certificados mantêm os 7 certificados da oferta vigente na data da matrícula. Em caso de dúvida, fale com a secretaria da sua unidade.",
-      "subtitulo": "2ª parte do técnico"
+      "subtitulo": "Para quem já é Auxiliar de Enfermagem",
+      "seletor": {
+        "descricao": "Já sou Auxiliar de Enfermagem"
+      }
     },
     {
       "id": "radiologia",

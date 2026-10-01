@@ -106,6 +106,9 @@ export interface CursoData {
   certificados: CertificadoRaw[];
   diploma: Diploma;
   nota?: string;
+  seletor?: {
+    descricao?: string;
+  };
 }
 
 export interface CursosConfig {
@@ -312,5 +315,19 @@ export const repository = {
       totalCertificados: certificados.length,
       regrasCertificados: cursosConfigData.regrasCertificados,
     };
+  },
+
+  getCursoOptionLabel(cursoNome: string): string {
+    const curso = this.findCursoByNomeNaBase(cursoNome);
+    if (curso?.seletor?.descricao) {
+      return `${cursoNome} — ${curso.seletor.descricao}`;
+    }
+    return cursoNome;
+  },
+
+  hasBothEnfermagemCourses(cursosList: string[]): boolean {
+    const hasEnf = cursosList.some((c) => c.trim().toLowerCase() === 'enfermagem');
+    const hasComp = cursosList.some((c) => c.trim().toLowerCase() === 'enfermagem complementação');
+    return hasEnf && hasComp;
   },
 };
