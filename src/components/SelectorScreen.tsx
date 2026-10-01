@@ -220,7 +220,7 @@ export const SelectorScreen: React.FC<SelectorScreenProps> = ({
                 </option>
                 {turnos.map((t) => (
                   <option key={t} value={t}>
-                    {repository.getTurnoLabel(t)} ({repository.getHorario(t)})
+                    {repository.getTurnoLabel(t)}
                   </option>
                 ))}
               </select>

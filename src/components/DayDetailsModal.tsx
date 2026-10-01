@@ -4,11 +4,11 @@ import { DayScheduleItem, formatDayMonth, getWeekdayNameCapitalized } from '../u
 
 interface DayDetailsModalProps {
   item: DayScheduleItem | null;
-  horarioTurno: string;
+  horarioTurno?: string;
   onClose: () => void;
 }
 
-export const DayDetailsModal: React.FC<DayDetailsModalProps> = ({ item, horarioTurno, onClose }) => {
+export const DayDetailsModal: React.FC<DayDetailsModalProps> = ({ item, onClose }) => {
   if (!item) return null;
 
   const weekday = getWeekdayNameCapitalized(item.dateISO);
@@ -53,9 +53,6 @@ export const DayDetailsModal: React.FC<DayDetailsModalProps> = ({ item, horarioT
               <p className="text-sm text-[#131313] leading-relaxed">
                 Boas-vindas ao seu curso na Proz Educação! Este é o primeiro encontro oficial da sua turma.
               </p>
-              <div className="mt-3 inline-flex items-center gap-2 px-3 py-1.5 rounded-[8px] bg-[#FF7F00] text-[#FFFFFF] text-xs font-medium">
-                Início: {horarioTurno}
-              </div>
             </div>
           )}
 
@@ -68,9 +65,6 @@ export const DayDetailsModal: React.FC<DayDetailsModalProps> = ({ item, horarioT
               <p className="text-sm text-[#5D5F69] leading-relaxed">
                 Aula presencial regular de acordo com a escala da sua turma.
               </p>
-              <div className="mt-3 inline-flex items-center gap-2 px-3 py-1.5 rounded-[8px] bg-[#8C52FF] text-[#FFFFFF] text-xs font-medium">
-                Horário da turma: {horarioTurno}
-              </div>
             </div>
           )}
 
@@ -86,9 +80,6 @@ export const DayDetailsModal: React.FC<DayDetailsModalProps> = ({ item, horarioT
               <p className="text-xs text-[#5D5F69] leading-relaxed">
                 Pode haver variação conforme o calendário da sua unidade. Em caso de dúvida, fale com a secretaria.
               </p>
-              <div className="mt-3 inline-flex items-center gap-2 px-3 py-1.5 rounded-[8px] bg-[#FEC13D] text-[#131313] text-xs font-bold">
-                Previsão de aula: {horarioTurno}
-              </div>
             </div>
           )}
 

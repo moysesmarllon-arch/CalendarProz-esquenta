@@ -89,7 +89,9 @@ export const CalendarScreen: React.FC<CalendarScreenProps> = ({ turma, onBackToS
     nextClassDateISO = turma.aulaInaugural;
     isNextInaugural = true;
   } else if (nextClassInfo.kind === 'next_class') {
-    const upcoming = schedule.aulas.find((iso) => iso >= todayISO);
+    const upcoming = schedule.aulas
+      .filter((iso) => iso !== turma.aulaInaugural)
+      .find((iso) => iso >= todayISO);
     if (upcoming) {
       nextClassDateISO = upcoming;
     }
@@ -102,9 +104,6 @@ export const CalendarScreen: React.FC<CalendarScreenProps> = ({ turma, onBackToS
   // Total de aulas por mês
   const totalOutubro = schedule.aulasPorMes['2026-10'] || 0;
   const totalNovembro = schedule.aulasPorMes['2026-11'] || 0;
-
-  // Format short horario (e.g. "19h" or "8h")
-  const shortHorario = horario.replace(':00', 'h').replace(/^0/, '');
 
   // Rolagem inicial: ao abrir a Tela 2 na aba calendário, role até o mês atual quando for outubro ou novembro
   useEffect(() => {
@@ -213,7 +212,7 @@ export const CalendarScreen: React.FC<CalendarScreenProps> = ({ turma, onBackToS
           <div className="mt-3 flex flex-wrap items-center gap-2 sm:gap-3 text-xs">
             <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-[10px] bg-[#EEE7F9] text-[#8C52FF] font-medium">
               <Clock className="w-3.5 h-3.5" />
-              <span>{turnoLabel} • {shortHorario}</span>
+              <span>{turnoLabel}</span>
             </div>
             <div className="inline-flex items-center gap-1 px-3 py-1.5 rounded-[10px] bg-[#EFEFEF] text-[#5D5F69] font-medium">
               <span>Unidade {turma.unidade}</span>
@@ -421,7 +420,6 @@ export const CalendarScreen: React.FC<CalendarScreenProps> = ({ turma, onBackToS
       {/* Touch-Friendly Day Details Modal */}
       <DayDetailsModal
         item={selectedDay}
-        horarioTurno={horario}
         onClose={() => setSelectedDay(null)}
       />
 

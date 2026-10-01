@@ -12,7 +12,7 @@
         "Enfermagem"
       ],
       "titulo": "Técnico em Enfermagem",
-      "resumo": "Você vai se formar para cuidar de pessoas em todas as fases da vida, do posto de saúde à UTI. O técnico de enfermagem é o profissional que fica mais perto do paciente.",
+      "resumo": "Você está fazendo um curso só: o Técnico em Enfermagem. Vai se formar para cuidar de pessoas em todas as fases da vida, do posto de saúde à UTI.",
       "porRegional": {
         "São Paulo": {
           "cargaHoraria": "1840h",
@@ -29,10 +29,10 @@
           }
         }
       },
-      "comoFunciona": "O curso tem duas etapas. Na Etapa Auxiliar, os 5 módulos são independentes: você pode entrar em qualquer um, e a ordem não muda sua formação. O Estágio Supervisionado I fecha essa etapa e libera o certificado de Auxiliar de Enfermagem. Na Etapa Complementação, mais 3 módulos e o Estágio Supervisionado II completam o técnico.",
+      "comoFunciona": "O Técnico em Enfermagem tem duas partes, e o diploma só vem ao final das duas. Na primeira, são 5 módulos independentes (você pode entrar em qualquer um) e o Estágio Supervisionado I. Ao concluí-la, você conquista a qualificação de Auxiliar de Enfermagem, um marco no meio do caminho. Na segunda parte, 3 módulos e o Estágio Supervisionado II completam sua formação de técnico.",
       "blocos": [
         {
-          "titulo": "Etapa Auxiliar",
+          "titulo": "1ª parte do técnico · Fundamentos do cuidado",
           "modulos": [
             {
               "nome": "Enfermagem na Atenção à Saúde do Adulto",
@@ -70,13 +70,13 @@
               "nome": "Estágio Supervisionado I",
               "tipo": "estagio",
               "aprende": "Você vai para um serviço de saúde colocar em prática o que aprendeu, acompanhado por um supervisor.",
-              "mercado": "É sua primeira experiência real na área, conta no currículo e fecha a etapa de Auxiliar de Enfermagem.",
+              "mercado": "É sua primeira experiência real na área e conta no currículo. Ao concluí-lo, você conquista a qualificação de Auxiliar e segue para a 2ª parte do técnico.",
               "certificadoId": "enf-auxiliar"
             }
           ]
         },
         {
-          "titulo": "Etapa Complementação",
+          "titulo": "2ª parte do técnico · Cuidado de alta complexidade",
           "modulos": [
             {
               "nome": "Assistência ao Paciente Crítico Adulto",
@@ -101,7 +101,7 @@
               "nome": "Estágio Supervisionado II",
               "tipo": "estagio",
               "aprende": "Prática supervisionada em áreas de maior complexidade, fechando sua formação técnica.",
-              "mercado": "Com ele concluído, você completa o caminho para o diploma de Técnico em Enfermagem."
+              "mercado": "É a última etapa: com ele concluído, você recebe o diploma de Técnico em Enfermagem."
             }
           ]
         }
@@ -163,12 +163,13 @@
             "São Paulo": "Conclusão dos 5 módulos da Etapa Auxiliar e de 400h de Estágio Supervisionado.",
             "Minas Gerais": "Conclusão dos 5 módulos da Etapa Auxiliar e de 280h de Estágio Supervisionado."
           },
-          "impacto": "É uma qualificação profissional: com ela, você pode solicitar a inscrição no COREN como Auxiliar de Enfermagem, conforme as regras do conselho, e começar a trabalhar na área enquanto conclui o técnico."
+          "impacto": "É uma conquista no meio do caminho, não o fim do curso. Com ela, você pode solicitar a inscrição no COREN como Auxiliar de Enfermagem, conforme as regras do conselho. Mas a formação que você contratou é a de técnico: só concluindo a segunda parte você recebe o diploma de Técnico em Enfermagem e pode atuar em cuidados de maior complexidade.",
+          "marcoNoCaminho": true
         }
       ],
       "diploma": {
         "nome": "Diploma de Técnico em Enfermagem",
-        "impacto": "Diploma com validade nacional. Com ele, você solicita a inscrição no COREN como Técnico de Enfermagem, exigida para atuar."
+        "impacto": "É o objetivo do seu curso. Diploma com validade nacional, que permite solicitar a inscrição no COREN como Técnico de Enfermagem. Com ele, você pode assumir cuidados de maior complexidade, como a assistência a pacientes graves em UTI e urgência, que a legislação reserva ao técnico e ao enfermeiro."
       },
       "nota": "Alunos matriculados antes da nova composição de certificados mantêm os 7 certificados da oferta vigente na data da matrícula. Em caso de dúvida, fale com a secretaria da sua unidade."
     },
@@ -177,8 +178,8 @@
       "nomesNaBase": [
         "Enfermagem Complementação"
       ],
-      "titulo": "Técnico em Enfermagem – Complementação",
-      "resumo": "Você já tem a base de Auxiliar de Enfermagem. Agora vai aprofundar o cuidado de pacientes graves e a segurança do paciente para se tornar Técnico em Enfermagem.",
+      "titulo": "Técnico em Enfermagem",
+      "resumo": "Esta é a parte que completa sua formação e leva ao diploma de Técnico em Enfermagem: o cuidado de pacientes graves, da UTI à urgência, e a segurança do paciente.",
       "porRegional": {
         "São Paulo": {
           "duracao": {
@@ -186,10 +187,10 @@
           }
         }
       },
-      "comoFunciona": "São 3 módulos e o Estágio Supervisionado II. Ao concluir, você recebe o diploma de Técnico em Enfermagem.",
+      "comoFunciona": "Seu curso é o Técnico em Enfermagem, e esta é a 2ª parte dele. São 3 módulos e o Estágio Supervisionado II. Ao concluir, você recebe o diploma de Técnico, o objetivo da sua formação.",
       "blocos": [
         {
-          "titulo": "Etapa Complementação",
+          "titulo": "2ª parte do técnico · Cuidado de alta complexidade",
           "modulos": [
             {
               "nome": "Assistência ao Paciente Crítico Adulto",
@@ -214,7 +215,7 @@
               "nome": "Estágio Supervisionado II",
               "tipo": "estagio",
               "aprende": "Prática supervisionada em áreas de maior complexidade, fechando sua formação técnica.",
-              "mercado": "Com ele concluído, você completa o caminho para o diploma de Técnico em Enfermagem."
+              "mercado": "É a última etapa: com ele concluído, você recebe o diploma de Técnico em Enfermagem."
             }
           ]
         }
@@ -245,9 +246,10 @@
       ],
       "diploma": {
         "nome": "Diploma de Técnico em Enfermagem",
-        "impacto": "Diploma com validade nacional. Com ele, você solicita a inscrição no COREN como Técnico de Enfermagem, exigida para atuar."
+        "impacto": "É o objetivo do seu curso. Diploma com validade nacional, que permite solicitar a inscrição no COREN como Técnico de Enfermagem. Com ele, você pode assumir cuidados de maior complexidade, como a assistência a pacientes graves em UTI e urgência, que a legislação reserva ao técnico e ao enfermeiro."
       },
-      "nota": "Alunos matriculados antes da nova composição de certificados mantêm os 7 certificados da oferta vigente na data da matrícula. Em caso de dúvida, fale com a secretaria da sua unidade."
+      "nota": "Alunos matriculados antes da nova composição de certificados mantêm os 7 certificados da oferta vigente na data da matrícula. Em caso de dúvida, fale com a secretaria da sua unidade.",
+      "subtitulo": "2ª parte do técnico"
     },
     {
       "id": "radiologia",

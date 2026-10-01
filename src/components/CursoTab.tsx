@@ -12,6 +12,8 @@ import {
   ExternalLink,
   Layers,
   CheckCircle2,
+  ArrowRight,
+  ArrowDown,
 } from 'lucide-react';
 
 interface CursoTabProps {
@@ -71,16 +73,27 @@ export const CursoTab: React.FC<CursoTabProps> = ({ turma }) => {
   const certificadosMap = new Map<string, (typeof certificados)[0]>();
   certificados.forEach((c) => certificadosMap.set(c.id, c));
 
+  // Verifica se existe certificado com marcoNoCaminho (ex.: Auxiliar de Enfermagem)
+  const hasMarcoNoCaminho = certificados.some((c) => c.marcoNoCaminho);
+
   return (
     <div className="space-y-6 animate-in fade-in duration-200">
-      {/* 1. TOPO: Título, Resumo e Três Grandes Números */}
+      {/* 1. TOPO: Título, Subtítulo (se houver), Resumo e Números em Destaque */}
       <section className="bg-[#FFFFFF] rounded-[20px] border border-[#EFEFEF] card-shadow p-6 sm:p-7">
         <span className="text-xs font-bold uppercase tracking-[0.05em] text-[#FF7F00]">
           Matriz curricular
         </span>
-        <h2 className="text-2xl sm:text-3xl font-bold text-[#593493] mt-1 mb-2">
+        
+        <h2 className="text-2xl sm:text-3xl font-bold text-[#593493] mt-1 mb-1">
           {curso.titulo}
         </h2>
+
+        {curso.subtitulo && (
+          <p className="text-sm sm:text-base font-medium text-[#8C52FF] mb-2">
+            {curso.subtitulo}
+          </p>
+        )}
+
         <p className="text-sm text-[#5D5F69] leading-relaxed mb-6">
           {curso.resumo}
         </p>
@@ -138,9 +151,39 @@ export const CursoTab: React.FC<CursoTabProps> = ({ turma }) => {
         })()}
       </section>
 
-      {/* 2. COMO FUNCIONA */}
+      {/* 2. DIPLOMA - SEU OBJETIVO (Gradiente Primário posicionado logo após os números) */}
+      {curso.diploma && (
+        <section className="gradient-primary text-[#FFFFFF] rounded-[20px] p-6 sm:p-7 card-shadow relative overflow-hidden">
+          <div className="absolute -top-12 -right-12 w-44 h-44 rounded-full bg-[#FFFFFF]/10 pointer-events-none" />
+          <div className="relative z-10 space-y-4">
+            <div className="flex items-center justify-between gap-3">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-[8px] bg-[#FFFFFF]/20 text-xs font-bold text-[#FFFFFF] backdrop-blur-xs">
+                <GraduationCap className="w-4 h-4" />
+                Seu objetivo
+              </div>
+              <Logo variant="white" widthClass="w-[100px] sm:w-[130px]" />
+            </div>
+
+            <div>
+              <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-[#FFFFFF]">
+                {curso.diploma.nome}
+              </h3>
+              <p className="mt-2 text-xs sm:text-sm text-[#FFFFFF]/90 leading-relaxed max-w-xl">
+                {curso.diploma.impacto}
+              </p>
+            </div>
+
+            <div className="pt-1 flex items-center gap-2 text-xs text-[#FEC13D] font-bold">
+              <CheckCircle2 className="w-4 h-4" />
+              <span>Validade em todo o território nacional</span>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* 3. COMO FUNCIONA (Com trilha visual quando houver marco) */}
       {curso.comoFunciona && (
-        <section className="bg-[#EEE7F9] rounded-[20px] border border-[#8C52FF]/20 card-shadow p-5 sm:p-6">
+        <section className="bg-[#EEE7F9] rounded-[20px] border border-[#8C52FF]/20 card-shadow p-5 sm:p-6 space-y-4">
           <div className="flex items-start gap-3.5">
             <div className="w-10 h-10 rounded-[12px] bg-[#8C52FF] text-[#FFFFFF] flex items-center justify-center shrink-0 shadow-xs">
               <Info className="w-5 h-5" />
@@ -159,10 +202,82 @@ export const CursoTab: React.FC<CursoTabProps> = ({ turma }) => {
               </p>
             </div>
           </div>
+
+          {/* Trilha visual horizontal (vertical no mobile) quando houver marco no caminho */}
+          {hasMarcoNoCaminho && (
+            <div className="pt-3 border-t border-[#8C52FF]/20">
+              <span className="text-[11px] font-bold uppercase tracking-[0.05em] text-[#593493] block mb-3">
+                Trilha da sua formação
+              </span>
+              
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-2.5">
+                {/* Ponto 1: 1ª parte */}
+                <div className="flex-1 p-3 rounded-[12px] bg-[#FFFFFF] border border-[#8C52FF]/20 text-center">
+                  <span className="text-xs font-bold text-[#593493] block">
+                    1ª parte
+                  </span>
+                  <span className="text-[10px] text-[#5D5F69]">
+                    Fundamentos
+                  </span>
+                </div>
+
+                <div className="hidden sm:flex text-[#8C52FF] shrink-0 justify-center">
+                  <ArrowRight className="w-4 h-4" />
+                </div>
+                <div className="flex sm:hidden text-[#8C52FF] shrink-0 justify-center -my-1">
+                  <ArrowDown className="w-3.5 h-3.5" />
+                </div>
+
+                {/* Ponto 2: Auxiliar (marco) - Menor, em Roxo Vibrante */}
+                <div className="flex-1 p-2.5 rounded-[12px] bg-[#FFFFFF] border border-[#8C52FF] text-center">
+                  <span className="text-xs font-bold text-[#8C52FF] block">
+                    Auxiliar (marco)
+                  </span>
+                  <span className="text-[10px] text-[#5D5F69]">
+                    No meio do caminho
+                  </span>
+                </div>
+
+                <div className="hidden sm:flex text-[#8C52FF] shrink-0 justify-center">
+                  <ArrowRight className="w-4 h-4" />
+                </div>
+                <div className="flex sm:hidden text-[#8C52FF] shrink-0 justify-center -my-1">
+                  <ArrowDown className="w-3.5 h-3.5" />
+                </div>
+
+                {/* Ponto 3: 2ª parte */}
+                <div className="flex-1 p-3 rounded-[12px] bg-[#FFFFFF] border border-[#8C52FF]/20 text-center">
+                  <span className="text-xs font-bold text-[#593493] block">
+                    2ª parte
+                  </span>
+                  <span className="text-[10px] text-[#5D5F69]">
+                    Alta complexidade
+                  </span>
+                </div>
+
+                <div className="hidden sm:flex text-[#8C52FF] shrink-0 justify-center">
+                  <ArrowRight className="w-4 h-4" />
+                </div>
+                <div className="flex sm:hidden text-[#8C52FF] shrink-0 justify-center -my-1">
+                  <ArrowDown className="w-3.5 h-3.5" />
+                </div>
+
+                {/* Ponto 4: Diploma de Técnico - Em destaque Laranja #FF7F00 */}
+                <div className="flex-1 p-3 rounded-[12px] bg-[#FFF3E5] border-2 border-[#FF7F00] text-center shadow-xs">
+                  <span className="text-xs font-bold text-[#FF7F00] block">
+                    Diploma de Técnico
+                  </span>
+                  <span className="text-[10px] text-[#131313] font-medium">
+                    Objetivo do curso
+                  </span>
+                </div>
+              </div>
+            </div>
+          )}
         </section>
       )}
 
-      {/* 3. MÓDULOS (ACORDEÕES POR BLOCO) */}
+      {/* 4. MÓDULOS (ACORDEÕES POR BLOCO) */}
       <section className="space-y-6">
         {curso.blocos.map((bloco, bIdx) => (
           <div key={bIdx} className="space-y-3">
@@ -265,13 +380,13 @@ export const CursoTab: React.FC<CursoTabProps> = ({ turma }) => {
         ))}
       </section>
 
-      {/* 4. CERTIFICADOS */}
+      {/* 5. CONQUISTAS NO CAMINHO (CERTIFICADOS) */}
       {certificados.length > 0 && (
         <section className="space-y-4 pt-2">
           <div className="flex items-center gap-2 px-1">
             <Award className="w-5 h-5 text-[#8C52FF]" />
             <h3 className="text-lg sm:text-xl font-bold text-[#593493]">
-              Certificados do curso
+              Conquistas no caminho
             </h3>
           </div>
 
@@ -301,7 +416,8 @@ export const CursoTab: React.FC<CursoTabProps> = ({ turma }) => {
           {/* Cards dos Certificados */}
           <div className="grid grid-cols-1 gap-3.5">
             {certificados.map((cert) => {
-              const isIntermediario = cert.tipo === 'intermediario';
+              const isMarco = Boolean(cert.marcoNoCaminho);
+              const isIntermediario = cert.tipo === 'intermediario' && !isMarco;
 
               return (
                 <div
@@ -310,15 +426,20 @@ export const CursoTab: React.FC<CursoTabProps> = ({ turma }) => {
                   className="bg-[#FFFFFF] rounded-[16px] border border-[#EFEFEF] card-shadow p-5 transition-all duration-300"
                 >
                   <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
-                    <span
-                      className={`px-2.5 py-1 rounded-[8px] text-[11px] font-bold ${
-                        isIntermediario
-                          ? 'bg-[#8C52FF] text-[#FFFFFF]'
-                          : 'bg-[#EFEFEF] text-[#5D5F69]'
-                      }`}
-                    >
-                      {isIntermediario ? 'Intermediário' : 'Livre'}
-                    </span>
+                    {/* Selo: Marco no caminho / Intermediário / Livre */}
+                    {isMarco ? (
+                      <span className="px-2.5 py-1 rounded-[8px] text-[11px] font-bold bg-[#EEE7F9] text-[#8C52FF] border border-[#8C52FF]/20">
+                        Marco no caminho
+                      </span>
+                    ) : isIntermediario ? (
+                      <span className="px-2.5 py-1 rounded-[8px] text-[11px] font-bold bg-[#8C52FF] text-[#FFFFFF]">
+                        Intermediário
+                      </span>
+                    ) : (
+                      <span className="px-2.5 py-1 rounded-[8px] text-[11px] font-bold bg-[#EFEFEF] text-[#5D5F69]">
+                        Livre
+                      </span>
+                    )}
 
                     {cert.cargaHoraria && (
                       <span className="text-xs font-bold text-[#8C52FF] flex items-center gap-1">
@@ -365,36 +486,6 @@ export const CursoTab: React.FC<CursoTabProps> = ({ turma }) => {
               <span>{curso.nota}</span>
             </div>
           )}
-        </section>
-      )}
-
-      {/* 5. DIPLOMA FINAL (Gradiente Primário) */}
-      {curso.diploma && (
-        <section className="gradient-primary text-[#FFFFFF] rounded-[20px] p-6 sm:p-7 card-shadow relative overflow-hidden">
-          <div className="absolute -top-12 -right-12 w-44 h-44 rounded-full bg-[#FFFFFF]/10 pointer-events-none" />
-          <div className="relative z-10 space-y-4">
-            <div className="flex items-center justify-between gap-3">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-[8px] bg-[#FFFFFF]/20 text-xs font-bold text-[#FFFFFF] backdrop-blur-xs">
-                <GraduationCap className="w-4 h-4" />
-                Conclusão do curso
-              </div>
-              <Logo variant="white" widthClass="w-[100px] sm:w-[130px]" />
-            </div>
-
-            <div>
-              <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-[#FFFFFF]">
-                {curso.diploma.nome}
-              </h3>
-              <p className="mt-2 text-xs sm:text-sm text-[#FFFFFF]/90 leading-relaxed max-w-xl">
-                {curso.diploma.impacto}
-              </p>
-            </div>
-
-            <div className="pt-2 flex items-center gap-2 text-xs text-[#FEC13D] font-bold">
-              <CheckCircle2 className="w-4 h-4" />
-              <span>Validade em todo o território nacional</span>
-            </div>
-          </div>
         </section>
       )}
 

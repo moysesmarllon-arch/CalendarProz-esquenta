@@ -34,27 +34,17 @@ export function foldIcsLine(line: string): string {
   return result;
 }
 
-export function getUtcDatesForClass(dateISO: string, timeStr: string, durationMinutes: number) {
+export function getAllDayDates(dateISO: string): { startDate: string; endDate: string } {
   const [y, m, d] = dateISO.split('-').map(Number);
-  const [h, min] = timeStr.split(':').map(Number);
-
-  // Horário de Brasília (UTC-3), portanto UTC = hora + 3
-  const startUtc = new Date(Date.UTC(y, m - 1, d, h + 3, min, 0));
-  const endUtc = new Date(startUtc.getTime() + durationMinutes * 60 * 1000);
-
-  const formatUtc = (date: Date) => {
-    const yr = date.getUTCFullYear();
-    const mo = String(date.getUTCMonth() + 1).padStart(2, '0');
-    const dy = String(date.getUTCDate()).padStart(2, '0');
-    const hr = String(date.getUTCHours()).padStart(2, '0');
-    const mn = String(date.getUTCMinutes()).padStart(2, '0');
-    const sc = String(date.getUTCSeconds()).padStart(2, '0');
-    return `${yr}${mo}${dy}T${hr}${mn}${sc}Z`;
-  };
-
+  const nextDate = new Date(Date.UTC(y, m - 1, d + 1));
+  const startStr = dateISO.replace(/-/g, '');
+  const endYr = nextDate.getUTCFullYear();
+  const endMo = String(nextDate.getUTCMonth() + 1).padStart(2, '0');
+  const endDy = String(nextDate.getUTCDate()).padStart(2, '0');
+  const endStr = `${endYr}${endMo}${endDy}`;
   return {
-    dtStart: formatUtc(startUtc),
-    dtEnd: formatUtc(endUtc),
+    startDate: startStr,
+    endDate: endStr,
   };
 }
 
@@ -67,8 +57,6 @@ export function generateTurmaIcsContent(turma: Turma): string {
     config.confirmarComUnidade
   );
 
-  const horario = repository.getHorario(turma.turno);
-  const duracao = repository.getDuracaoMinutos(turma.turno);
   const endereco = repository.getEnderecoUnidade(turma.unidade);
   const turnoLabel = repository.getTurnoLabel(turma.turno);
 
@@ -91,15 +79,15 @@ export function generateTurmaIcsContent(turma: Turma): string {
   if (schedule.aulaInaugural) {
     const rawDate = schedule.aulaInaugural;
     const aaaammdd = rawDate.replace(/-/g, '');
-    const { dtStart, dtEnd } = getUtcDatesForClass(rawDate, horario, duracao);
+    const { startDate, endDate } = getAllDayDates(rawDate);
     const uid = `${cleanUnidade}-${cleanCurso}-${cleanTurno}-${aaaammdd}@calendario.proz`;
-    const summary = `Aula inaugural – ${turma.curso} | Proz`;
+    const summary = `Aula inaugural – ${turma.curso} (${turnoLabel}) | Proz`;
 
     lines.push('BEGIN:VEVENT');
     lines.push(`UID:${uid}`);
-    lines.push(`DTSTAMP:${dtStart}`);
-    lines.push(`DTSTART:${dtStart}`);
-    lines.push(`DTEND:${dtEnd}`);
+    lines.push(`DTSTAMP:${startDate}T000000Z`);
+    lines.push(`DTSTART;VALUE=DATE:${startDate}`);
+    lines.push(`DTEND;VALUE=DATE:${endDate}`);
     lines.push(`SUMMARY:${escapeIcsText(summary)}`);
     lines.push(`DESCRIPTION:${escapeIcsText(description)}`);
     if (endereco) {
@@ -109,30 +97,35 @@ export function generateTurmaIcsContent(turma: Turma): string {
     lines.push('BEGIN:VALARM');
     lines.push('ACTION:DISPLAY');
     lines.push('DESCRIPTION:Lembrete de aula');
-    lines.push('TRIGGER:-PT1H');
+    lines.push('TRIGGER:-PT6H');
     lines.push('END:VALARM');
     lines.push('END:VEVENT');
   }
 
   // 2. Eventos de Aulas
   schedule.aulas.forEach((dateISO) => {
+    // Se a data da aula coincidir com a aula inaugural, não duplica o evento
+    if (dateISO === schedule.aulaInaugural) {
+      return;
+    }
+
     const item = schedule.itemsByDate[dateISO];
     const isConfirmar = item && item.type === 'confirmar';
     const rawDate = dateISO;
     const aaaammdd = rawDate.replace(/-/g, '');
-    const { dtStart, dtEnd } = getUtcDatesForClass(rawDate, horario, duracao);
+    const { startDate, endDate } = getAllDayDates(rawDate);
     const uid = `${cleanUnidade}-${cleanCurso}-${cleanTurno}-${aaaammdd}@calendario.proz`;
 
-    let summary = `Aula – ${turma.curso} | Proz`;
+    let summary = `Aula – ${turma.curso} (${turnoLabel}) | Proz`;
     if (isConfirmar) {
       summary += ' (confirme com a unidade)';
     }
 
     lines.push('BEGIN:VEVENT');
     lines.push(`UID:${uid}`);
-    lines.push(`DTSTAMP:${dtStart}`);
-    lines.push(`DTSTART:${dtStart}`);
-    lines.push(`DTEND:${dtEnd}`);
+    lines.push(`DTSTAMP:${startDate}T000000Z`);
+    lines.push(`DTSTART;VALUE=DATE:${startDate}`);
+    lines.push(`DTEND;VALUE=DATE:${endDate}`);
     lines.push(`SUMMARY:${escapeIcsText(summary)}`);
     lines.push(`DESCRIPTION:${escapeIcsText(description)}`);
     if (endereco) {
@@ -142,7 +135,7 @@ export function generateTurmaIcsContent(turma: Turma): string {
     lines.push('BEGIN:VALARM');
     lines.push('ACTION:DISPLAY');
     lines.push('DESCRIPTION:Lembrete de aula');
-    lines.push('TRIGGER:-PT1H');
+    lines.push('TRIGGER:-PT6H');
     lines.push('END:VALARM');
     lines.push('END:VEVENT');
   });
@@ -175,23 +168,21 @@ export function getGoogleCalendarLinkForNextClass(
   nextClassDateISO: string,
   isAulaInaugural: boolean
 ): string {
-  const horario = repository.getHorario(turma.turno);
-  const duracao = repository.getDuracaoMinutos(turma.turno);
   const endereco = repository.getEnderecoUnidade(turma.unidade);
   const turnoLabel = repository.getTurnoLabel(turma.turno);
 
-  const { dtStart, dtEnd } = getUtcDatesForClass(nextClassDateISO, horario, duracao);
+  const { startDate, endDate } = getAllDayDates(nextClassDateISO);
 
   const title = isAulaInaugural
-    ? `Aula inaugural – ${turma.curso} | Proz`
-    : `Aula – ${turma.curso} | Proz`;
+    ? `Aula inaugural – ${turma.curso} (${turnoLabel}) | Proz`
+    : `Aula – ${turma.curso} (${turnoLabel}) | Proz`;
 
   const description = `${turma.curso} – ${turnoLabel} – ${turma.unidade}. Calendário sujeito a ajustes; em caso de dúvida, a sua unidade é a fonte oficial.`;
 
   const params = new URLSearchParams({
     action: 'TEMPLATE',
     text: title,
-    dates: `${dtStart}/${dtEnd}`,
+    dates: `${startDate}/${endDate}`,
     details: description,
   });
 
@@ -199,5 +190,8 @@ export function getGoogleCalendarLinkForNextClass(
     params.set('location', endereco);
   }
 
-  return `https://calendar.google.com/calendar/render?${params.toString()}`;
+  return `https://calendar.google.com/calendar/render?${params.toString()}`.replace(
+    `${startDate}%2F${endDate}`,
+    `${startDate}/${endDate}`
+  );
 }

@@ -230,7 +230,7 @@ export function getNextClassInfo(
     return {
       kind: 'countdown_inaugural',
       title: `Faltam ${diffDaysInaugural} ${diffDaysInaugural === 1 ? 'dia' : 'dias'} para sua aula inaugural`,
-      details: `${getWeekdayNameCapitalized(turma.aulaInaugural)}, ${formatDayMonth(turma.aulaInaugural)}, às ${horario}`,
+      details: `${getWeekdayNameCapitalized(turma.aulaInaugural)}, ${formatDayMonth(turma.aulaInaugural)}`,
       daysRemaining: diffDaysInaugural,
     };
   }
@@ -239,28 +239,26 @@ export function getNextClassInfo(
     return {
       kind: 'inaugural_today',
       title: 'Hoje é sua aula inaugural!',
-      details: `${getWeekdayNameCapitalized(turma.aulaInaugural)}, às ${horario}`,
+      details: `${getWeekdayNameCapitalized(turma.aulaInaugural)}, ${formatDayMonth(turma.aulaInaugural)}`,
     };
   }
 
   // After inaugural class: find next class on or after today
   const upcomingAulas = schedule.aulas.filter((iso) => {
     const d = parseLocalDate(iso);
-    return d >= today;
+    return d >= today && iso !== turma.aulaInaugural;
   });
 
   if (upcomingAulas.length > 0) {
     const nextIso = upcomingAulas[0];
     const isToday = nextIso === todayISO;
-    const formattedHorario = horario.replace(':00', 'h').replace('08h', '8h');
     const weekday = getWeekdayNameShort(nextIso);
 
     return {
       kind: 'next_class',
       title: isToday
-        ? `Sua aula é hoje: ${weekday}, ${formatDayMonth(nextIso)}, às ${formattedHorario}`
-        : `Sua próxima aula: ${weekday}, ${formatDayMonth(nextIso)}, às ${formattedHorario}`,
-      details: `Horário normal do turno: ${horario}`,
+        ? `Sua aula é hoje: ${weekday}, ${formatDayMonth(nextIso)}`
+        : `Sua próxima aula: ${weekday}, ${formatDayMonth(nextIso)}`,
     };
   }
 

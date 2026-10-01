@@ -1,5 +1,5 @@
 {
-  "versao": "2026-out-nov",
+  "versao": "2026-10-entrada-outubro",
   "periodoVisivel": {
     "inicio": "2026-10-01",
     "fim": "2026-11-30",
@@ -22,12 +22,72 @@
   "whatsapp": "553182357943",
   "unidades": [
     {
-      "unidade": "Carapicuíba",
-      "endereco": ""
+      "unidade": "Belo Horizonte",
+      "endereco": "R. Espírito Santo, 900 - Centro, Belo Horizonte - MG"
     },
     {
-      "unidade": "Divinopolis",
-      "endereco": ""
+      "unidade": "Carapicuíba",
+      "endereco": "Av. Corifeu de Azevedo Marques, 15 - Carapicuíba - SP"
+    },
+    {
+      "unidade": "Contagem",
+      "endereco": "R. Lino de Môro, 25 - Inconfidentes, Contagem - MG"
+    },
+    {
+      "unidade": "Diadema",
+      "endereco": "Av. Nossa Senhora das Vitórias, 240 - Centro, Diadema - SP"
+    },
+    {
+      "unidade": "Divinópolis",
+      "endereco": "Av. Getúlio Vargas, 420 - Centro, Divinópolis - MG"
+    },
+    {
+      "unidade": "Grajaú",
+      "endereco": "Av. do Arvoreiro, 59 - Parque das Árvores, São Paulo - SP"
+    },
+    {
+      "unidade": "Guaianases",
+      "endereco": "R. Professor Francisco Pinheiro, 251 - Guaianases, São Paulo - SP"
+    },
+    {
+      "unidade": "Guarulhos",
+      "endereco": "R. Luiz Faccini, 16 - Centro, Guarulhos - SP"
+    },
+    {
+      "unidade": "Itaquera",
+      "endereco": "R. Ken Sugaya, 395 - Itaquera, São Paulo - SP"
+    },
+    {
+      "unidade": "Jabaquara",
+      "endereco": "R. dos Comerciários, 206 - Cidade Vargas, São Paulo - SP"
+    },
+    {
+      "unidade": "Juiz de Fora",
+      "endereco": "Av. dos Andradas, 547 - Centro, Juiz de Fora - MG"
+    },
+    {
+      "unidade": "Mauá",
+      "endereco": "R. General Osório, 188 - Vila Bocaina, Mauá - SP"
+    },
+    {
+      "unidade": "Montes Claros",
+      "endereco": "Av. Cula Mangabeira, 555 - Santo Expedito, Montes Claros - MG"
+    },
+    {
+      "unidade": "Santo Amaro",
+      "endereco": "R. Barão do Rio Branco, 192 - Santo Amaro, São Paulo - SP"
+    },
+    {
+      "unidade": "São Miguel",
+      "endereco": "Av. Marechal Tito, 91 - São Miguel Paulista, São Paulo - SP"
+    },
+    {
+      "unidade": "Uberlândia",
+      "endereco": "Av. João Pinheiro, 620 - Centro, Uberlândia - MG"
+    },
+    {
+      "unidade": "Venda Nova",
+      "endereco": "R. Bernardo Ferreira da Cruz, 52 - São Pedro (Venda Nova), Belo Horizonte - MG"
     }
   ],
   "diasSemAula": [
@@ -60,68 +120,1354 @@
   "confirmarComUnidade": [],
   "turmas": [
     {
-      "regional": "São Paulo",
-      "unidade": "Carapicuíba",
-      "curso": "Estética",
+      "id": "belo-horizonte-desenvolvimento-de-sistemas-m-2026-10-29",
+      "regional": "Minas Gerais",
+      "unidade": "Belo Horizonte",
+      "curso": "Desenvolvimento de Sistemas",
       "turno": "M",
       "aulaInaugural": "2026-10-07",
-      "primeiraAula": "2026-10-08"
+      "primeiraAula": "2026-10-29"
     },
     {
-      "regional": "São Paulo",
-      "unidade": "Carapicuíba",
+      "id": "belo-horizonte-desenvolvimento-de-sistemas-n-2026-10-15",
+      "regional": "Minas Gerais",
+      "unidade": "Belo Horizonte",
+      "curso": "Desenvolvimento de Sistemas",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-15"
+    },
+    {
+      "id": "belo-horizonte-enfermagem-m-2026-10-16",
+      "regional": "Minas Gerais",
+      "unidade": "Belo Horizonte",
       "curso": "Enfermagem",
       "turno": "M",
       "aulaInaugural": "2026-10-07",
       "primeiraAula": "2026-10-16"
     },
     {
+      "id": "belo-horizonte-enfermagem-n-2026-10-15",
+      "regional": "Minas Gerais",
+      "unidade": "Belo Horizonte",
+      "curso": "Enfermagem",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-15"
+    },
+    {
+      "id": "belo-horizonte-enfermagem-s-2026-10-03",
+      "regional": "Minas Gerais",
+      "unidade": "Belo Horizonte",
+      "curso": "Enfermagem",
+      "turno": "S",
+      "aulaInaugural": "2026-10-03",
+      "primeiraAula": "2026-10-03"
+    },
+    {
+      "id": "belo-horizonte-enfermagem-t-2026-10-16",
+      "regional": "Minas Gerais",
+      "unidade": "Belo Horizonte",
+      "curso": "Enfermagem",
+      "turno": "T",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-16"
+    },
+    {
+      "id": "belo-horizonte-radiologia-n-2026-10-15",
+      "regional": "Minas Gerais",
+      "unidade": "Belo Horizonte",
+      "curso": "Radiologia",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-15"
+    },
+    {
+      "id": "belo-horizonte-seguranca-do-trabalho-m-2026-10-29",
+      "regional": "Minas Gerais",
+      "unidade": "Belo Horizonte",
+      "curso": "Segurança do Trabalho",
+      "turno": "M",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-29"
+    },
+    {
+      "id": "belo-horizonte-seguranca-do-trabalho-n-2026-10-29",
+      "regional": "Minas Gerais",
+      "unidade": "Belo Horizonte",
+      "curso": "Segurança do Trabalho",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-29"
+    },
+    {
+      "id": "belo-horizonte-seguranca-do-trabalho-t-2026-10-29",
+      "regional": "Minas Gerais",
+      "unidade": "Belo Horizonte",
+      "curso": "Segurança do Trabalho",
+      "turno": "T",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-29"
+    },
+    {
+      "id": "contagem-desenvolvimento-de-sistemas-m-2026-10-14",
+      "regional": "Minas Gerais",
+      "unidade": "Contagem",
+      "curso": "Desenvolvimento de Sistemas",
+      "turno": "M",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "contagem-desenvolvimento-de-sistemas-n-2026-10-15",
+      "regional": "Minas Gerais",
+      "unidade": "Contagem",
+      "curso": "Desenvolvimento de Sistemas",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-15"
+    },
+    {
+      "id": "contagem-desenvolvimento-de-sistemas-t-2026-10-15",
+      "regional": "Minas Gerais",
+      "unidade": "Contagem",
+      "curso": "Desenvolvimento de Sistemas",
+      "turno": "T",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-15"
+    },
+    {
+      "id": "contagem-enfermagem-m-2026-10-14",
+      "regional": "Minas Gerais",
+      "unidade": "Contagem",
+      "curso": "Enfermagem",
+      "turno": "M",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "contagem-enfermagem-n-2026-10-14",
+      "regional": "Minas Gerais",
+      "unidade": "Contagem",
+      "curso": "Enfermagem",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "contagem-enfermagem-t-2026-10-14",
+      "regional": "Minas Gerais",
+      "unidade": "Contagem",
+      "curso": "Enfermagem",
+      "turno": "T",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "contagem-estetica-m-2026-10-14",
+      "regional": "Minas Gerais",
+      "unidade": "Contagem",
+      "curso": "Estética",
+      "turno": "M",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "contagem-estetica-n-2026-10-14",
+      "regional": "Minas Gerais",
+      "unidade": "Contagem",
+      "curso": "Estética",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "contagem-estetica-t-2026-10-14",
+      "regional": "Minas Gerais",
+      "unidade": "Contagem",
+      "curso": "Estética",
+      "turno": "T",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "contagem-radiologia-n-2026-10-15",
+      "regional": "Minas Gerais",
+      "unidade": "Contagem",
+      "curso": "Radiologia",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-15"
+    },
+    {
+      "id": "contagem-seguranca-do-trabalho-m-2026-10-14",
+      "regional": "Minas Gerais",
+      "unidade": "Contagem",
+      "curso": "Segurança do Trabalho",
+      "turno": "M",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "contagem-seguranca-do-trabalho-n-2026-10-14",
+      "regional": "Minas Gerais",
+      "unidade": "Contagem",
+      "curso": "Segurança do Trabalho",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "divinopolis-desenvolvimento-de-sistemas-n-2026-10-16",
+      "regional": "Minas Gerais",
+      "unidade": "Divinópolis",
+      "curso": "Desenvolvimento de Sistemas",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-16"
+    },
+    {
+      "id": "divinopolis-desenvolvimento-de-sistemas-t-2026-10-16",
+      "regional": "Minas Gerais",
+      "unidade": "Divinópolis",
+      "curso": "Desenvolvimento de Sistemas",
+      "turno": "T",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-16"
+    },
+    {
+      "id": "divinopolis-enfermagem-n-2026-10-27",
+      "regional": "Minas Gerais",
+      "unidade": "Divinópolis",
+      "curso": "Enfermagem",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-27"
+    },
+    {
+      "id": "divinopolis-enfermagem-t-2026-10-14",
+      "regional": "Minas Gerais",
+      "unidade": "Divinópolis",
+      "curso": "Enfermagem",
+      "turno": "T",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "divinopolis-estetica-t-2026-10-08",
+      "regional": "Minas Gerais",
+      "unidade": "Divinópolis",
+      "curso": "Estética",
+      "turno": "T",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-08"
+    },
+    {
+      "id": "divinopolis-radiologia-n-2026-10-15",
+      "regional": "Minas Gerais",
+      "unidade": "Divinópolis",
+      "curso": "Radiologia",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-15"
+    },
+    {
+      "id": "juiz-de-fora-desenvolvimento-de-sistemas-n-2026-10-14",
+      "regional": "Minas Gerais",
+      "unidade": "Juiz de Fora",
+      "curso": "Desenvolvimento de Sistemas",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "juiz-de-fora-desenvolvimento-de-sistemas-t-2026-10-14",
+      "regional": "Minas Gerais",
+      "unidade": "Juiz de Fora",
+      "curso": "Desenvolvimento de Sistemas",
+      "turno": "T",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "juiz-de-fora-enfermagem-m-2026-10-14",
+      "regional": "Minas Gerais",
+      "unidade": "Juiz de Fora",
+      "curso": "Enfermagem",
+      "turno": "M",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "juiz-de-fora-enfermagem-n-2026-10-14",
+      "regional": "Minas Gerais",
+      "unidade": "Juiz de Fora",
+      "curso": "Enfermagem",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "montes-claros-desenvolvimento-de-sistemas-n-2026-10-15",
+      "regional": "Minas Gerais",
+      "unidade": "Montes Claros",
+      "curso": "Desenvolvimento de Sistemas",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-15"
+    },
+    {
+      "id": "montes-claros-desenvolvimento-de-sistemas-t-2026-10-15",
+      "regional": "Minas Gerais",
+      "unidade": "Montes Claros",
+      "curso": "Desenvolvimento de Sistemas",
+      "turno": "T",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-15"
+    },
+    {
+      "id": "montes-claros-enfermagem-m-2026-10-14",
+      "regional": "Minas Gerais",
+      "unidade": "Montes Claros",
+      "curso": "Enfermagem",
+      "turno": "M",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "montes-claros-enfermagem-n-2026-10-14",
+      "regional": "Minas Gerais",
+      "unidade": "Montes Claros",
+      "curso": "Enfermagem",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "montes-claros-enfermagem-t-2026-10-14",
+      "regional": "Minas Gerais",
+      "unidade": "Montes Claros",
+      "curso": "Enfermagem",
+      "turno": "T",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "montes-claros-estetica-t-2026-10-08",
+      "regional": "Minas Gerais",
+      "unidade": "Montes Claros",
+      "curso": "Estética",
+      "turno": "T",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-08"
+    },
+    {
+      "id": "montes-claros-radiologia-m-2026-10-14",
+      "regional": "Minas Gerais",
+      "unidade": "Montes Claros",
+      "curso": "Radiologia",
+      "turno": "M",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "montes-claros-seguranca-do-trabalho-n-2026-10-19",
+      "regional": "Minas Gerais",
+      "unidade": "Montes Claros",
+      "curso": "Segurança do Trabalho",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-19"
+    },
+    {
+      "id": "montes-claros-seguranca-do-trabalho-t-2026-10-16",
+      "regional": "Minas Gerais",
+      "unidade": "Montes Claros",
+      "curso": "Segurança do Trabalho",
+      "turno": "T",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-16"
+    },
+    {
+      "id": "uberlandia-administracao-n-2026-10-14",
+      "regional": "Minas Gerais",
+      "unidade": "Uberlândia",
+      "curso": "Administração",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "uberlandia-desenvolvimento-de-sistemas-n-2026-10-14",
+      "regional": "Minas Gerais",
+      "unidade": "Uberlândia",
+      "curso": "Desenvolvimento de Sistemas",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "uberlandia-desenvolvimento-de-sistemas-t-2026-10-14",
+      "regional": "Minas Gerais",
+      "unidade": "Uberlândia",
+      "curso": "Desenvolvimento de Sistemas",
+      "turno": "T",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "uberlandia-enfermagem-m-2026-10-14",
+      "regional": "Minas Gerais",
+      "unidade": "Uberlândia",
+      "curso": "Enfermagem",
+      "turno": "M",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "uberlandia-enfermagem-n-2026-10-14",
+      "regional": "Minas Gerais",
+      "unidade": "Uberlândia",
+      "curso": "Enfermagem",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "uberlandia-enfermagem-t-2026-10-14",
+      "regional": "Minas Gerais",
+      "unidade": "Uberlândia",
+      "curso": "Enfermagem",
+      "turno": "T",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "uberlandia-radiologia-n-2026-10-14",
+      "regional": "Minas Gerais",
+      "unidade": "Uberlândia",
+      "curso": "Radiologia",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "venda-nova-administracao-n-2026-10-16",
+      "regional": "Minas Gerais",
+      "unidade": "Venda Nova",
+      "curso": "Administração",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-16"
+    },
+    {
+      "id": "venda-nova-desenvolvimento-de-sistemas-m-2026-10-14",
+      "regional": "Minas Gerais",
+      "unidade": "Venda Nova",
+      "curso": "Desenvolvimento de Sistemas",
+      "turno": "M",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "venda-nova-desenvolvimento-de-sistemas-n-2026-10-15",
+      "regional": "Minas Gerais",
+      "unidade": "Venda Nova",
+      "curso": "Desenvolvimento de Sistemas",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-15"
+    },
+    {
+      "id": "venda-nova-desenvolvimento-de-sistemas-t-2026-10-14",
+      "regional": "Minas Gerais",
+      "unidade": "Venda Nova",
+      "curso": "Desenvolvimento de Sistemas",
+      "turno": "T",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "venda-nova-enfermagem-m-2026-10-14",
+      "regional": "Minas Gerais",
+      "unidade": "Venda Nova",
+      "curso": "Enfermagem",
+      "turno": "M",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "venda-nova-enfermagem-n-2026-10-14",
+      "regional": "Minas Gerais",
+      "unidade": "Venda Nova",
+      "curso": "Enfermagem",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "venda-nova-enfermagem-t-2026-10-14",
+      "regional": "Minas Gerais",
+      "unidade": "Venda Nova",
+      "curso": "Enfermagem",
+      "turno": "T",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "carapicuiba-administracao-n-2026-10-14",
+      "regional": "São Paulo",
+      "unidade": "Carapicuíba",
+      "curso": "Administração",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "carapicuiba-desenvolvimento-de-sistemas-n-2026-10-15",
+      "regional": "São Paulo",
+      "unidade": "Carapicuíba",
+      "curso": "Desenvolvimento de Sistemas",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-15"
+    },
+    {
+      "id": "carapicuiba-enfermagem-m-2026-10-15",
+      "regional": "São Paulo",
+      "unidade": "Carapicuíba",
+      "curso": "Enfermagem",
+      "turno": "M",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-15"
+    },
+    {
+      "id": "carapicuiba-enfermagem-n-2026-10-14",
+      "regional": "São Paulo",
+      "unidade": "Carapicuíba",
+      "curso": "Enfermagem",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "carapicuiba-enfermagem-t-2026-10-15",
       "regional": "São Paulo",
       "unidade": "Carapicuíba",
       "curso": "Enfermagem",
       "turno": "T",
       "aulaInaugural": "2026-10-07",
-      "primeiraAula": "2026-10-19"
+      "primeiraAula": "2026-10-15"
     },
     {
+      "id": "carapicuiba-enfermagem-complementacao-m-2026-10-14",
       "regional": "São Paulo",
       "unidade": "Carapicuíba",
+      "curso": "Enfermagem Complementação",
+      "turno": "M",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "carapicuiba-enfermagem-complementacao-n-2026-10-14",
+      "regional": "São Paulo",
+      "unidade": "Carapicuíba",
+      "curso": "Enfermagem Complementação",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "carapicuiba-estetica-m-2026-10-14",
+      "regional": "São Paulo",
+      "unidade": "Carapicuíba",
+      "curso": "Estética",
+      "turno": "M",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "carapicuiba-estetica-n-2026-10-14",
+      "regional": "São Paulo",
+      "unidade": "Carapicuíba",
+      "curso": "Estética",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "carapicuiba-farmacia-n-2026-10-14",
+      "regional": "São Paulo",
+      "unidade": "Carapicuíba",
+      "curso": "Farmácia",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "carapicuiba-radiologia-m-2026-10-14",
+      "regional": "São Paulo",
+      "unidade": "Carapicuíba",
+      "curso": "Radiologia",
+      "turno": "M",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "carapicuiba-radiologia-n-2026-10-15",
+      "regional": "São Paulo",
+      "unidade": "Carapicuíba",
+      "curso": "Radiologia",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-15"
+    },
+    {
+      "id": "carapicuiba-seguranca-do-trabalho-n-2026-10-15",
+      "regional": "São Paulo",
+      "unidade": "Carapicuíba",
+      "curso": "Segurança do Trabalho",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-15"
+    },
+    {
+      "id": "diadema-administracao-n-2026-10-15",
+      "regional": "São Paulo",
+      "unidade": "Diadema",
+      "curso": "Administração",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-15"
+    },
+    {
+      "id": "diadema-enfermagem-m-2026-10-14",
+      "regional": "São Paulo",
+      "unidade": "Diadema",
+      "curso": "Enfermagem",
+      "turno": "M",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "diadema-enfermagem-n-2026-10-15",
+      "regional": "São Paulo",
+      "unidade": "Diadema",
       "curso": "Enfermagem",
       "turno": "N",
       "aulaInaugural": "2026-10-07",
-      "primeiraAula": "2026-10-19"
+      "primeiraAula": "2026-10-15"
     },
     {
-      "regional": "Minas Gerais",
-      "unidade": "Divinopolis",
+      "id": "diadema-enfermagem-complementacao-m-2026-10-14",
+      "regional": "São Paulo",
+      "unidade": "Diadema",
       "curso": "Enfermagem Complementação",
       "turno": "M",
       "aulaInaugural": "2026-10-07",
-      "primeiraAula": "2026-10-20"
+      "primeiraAula": "2026-10-14"
     },
     {
-      "regional": "Minas Gerais",
-      "unidade": "Divinopolis",
+      "id": "diadema-enfermagem-complementacao-n-2026-10-14",
+      "regional": "São Paulo",
+      "unidade": "Diadema",
       "curso": "Enfermagem Complementação",
       "turno": "N",
       "aulaInaugural": "2026-10-07",
-      "primeiraAula": "2026-10-20"
+      "primeiraAula": "2026-10-14"
     },
     {
-      "regional": "Minas Gerais",
-      "unidade": "Divinopolis",
+      "id": "diadema-estetica-n-2026-10-15",
+      "regional": "São Paulo",
+      "unidade": "Diadema",
+      "curso": "Estética",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-15"
+    },
+    {
+      "id": "diadema-radiologia-m-2026-10-14",
+      "regional": "São Paulo",
+      "unidade": "Diadema",
       "curso": "Radiologia",
       "turno": "M",
       "aulaInaugural": "2026-10-07",
-      "primeiraAula": "2026-10-09"
+      "primeiraAula": "2026-10-14"
     },
     {
-      "regional": "Minas Gerais",
-      "unidade": "Divinopolis",
+      "id": "diadema-radiologia-n-2026-10-14",
+      "regional": "São Paulo",
+      "unidade": "Diadema",
       "curso": "Radiologia",
       "turno": "N",
       "aulaInaugural": "2026-10-07",
-      "primeiraAula": "2026-10-09"
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "diadema-seguranca-do-trabalho-n-2026-10-15",
+      "regional": "São Paulo",
+      "unidade": "Diadema",
+      "curso": "Segurança do Trabalho",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-15"
+    },
+    {
+      "id": "grajau-desenvolvimento-de-sistemas-n-2026-10-15",
+      "regional": "São Paulo",
+      "unidade": "Grajaú",
+      "curso": "Desenvolvimento de Sistemas",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-15"
+    },
+    {
+      "id": "grajau-enfermagem-m-2026-10-14",
+      "regional": "São Paulo",
+      "unidade": "Grajaú",
+      "curso": "Enfermagem",
+      "turno": "M",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "grajau-enfermagem-n-2026-10-15",
+      "regional": "São Paulo",
+      "unidade": "Grajaú",
+      "curso": "Enfermagem",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-15"
+    },
+    {
+      "id": "grajau-enfermagem-t-2026-10-14",
+      "regional": "São Paulo",
+      "unidade": "Grajaú",
+      "curso": "Enfermagem",
+      "turno": "T",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "grajau-enfermagem-complementacao-m-2026-10-14",
+      "regional": "São Paulo",
+      "unidade": "Grajaú",
+      "curso": "Enfermagem Complementação",
+      "turno": "M",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "grajau-enfermagem-complementacao-n-2026-10-14",
+      "regional": "São Paulo",
+      "unidade": "Grajaú",
+      "curso": "Enfermagem Complementação",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "grajau-enfermagem-complementacao-t-2026-10-14",
+      "regional": "São Paulo",
+      "unidade": "Grajaú",
+      "curso": "Enfermagem Complementação",
+      "turno": "T",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "grajau-estetica-n-2026-10-14",
+      "regional": "São Paulo",
+      "unidade": "Grajaú",
+      "curso": "Estética",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "grajau-farmacia-n-2026-10-15",
+      "regional": "São Paulo",
+      "unidade": "Grajaú",
+      "curso": "Farmácia",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-15"
+    },
+    {
+      "id": "grajau-radiologia-n-2026-10-15",
+      "regional": "São Paulo",
+      "unidade": "Grajaú",
+      "curso": "Radiologia",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-15"
+    },
+    {
+      "id": "grajau-seguranca-do-trabalho-n-2026-10-14",
+      "regional": "São Paulo",
+      "unidade": "Grajaú",
+      "curso": "Segurança do Trabalho",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "guaianases-enfermagem-m-2026-10-14",
+      "regional": "São Paulo",
+      "unidade": "Guaianases",
+      "curso": "Enfermagem",
+      "turno": "M",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "guaianases-enfermagem-n-2026-10-14",
+      "regional": "São Paulo",
+      "unidade": "Guaianases",
+      "curso": "Enfermagem",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "guaianases-enfermagem-t-2026-10-15",
+      "regional": "São Paulo",
+      "unidade": "Guaianases",
+      "curso": "Enfermagem",
+      "turno": "T",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-15"
+    },
+    {
+      "id": "guaianases-enfermagem-complementacao-m-2026-10-15",
+      "regional": "São Paulo",
+      "unidade": "Guaianases",
+      "curso": "Enfermagem Complementação",
+      "turno": "M",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-15"
+    },
+    {
+      "id": "guaianases-enfermagem-complementacao-n-2026-10-14",
+      "regional": "São Paulo",
+      "unidade": "Guaianases",
+      "curso": "Enfermagem Complementação",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "guaianases-enfermagem-complementacao-t-2026-10-14",
+      "regional": "São Paulo",
+      "unidade": "Guaianases",
+      "curso": "Enfermagem Complementação",
+      "turno": "T",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "guaianases-estetica-m-2026-10-14",
+      "regional": "São Paulo",
+      "unidade": "Guaianases",
+      "curso": "Estética",
+      "turno": "M",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "guaianases-farmacia-m-2026-10-15",
+      "regional": "São Paulo",
+      "unidade": "Guaianases",
+      "curso": "Farmácia",
+      "turno": "M",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-15"
+    },
+    {
+      "id": "guaianases-farmacia-n-2026-10-14",
+      "regional": "São Paulo",
+      "unidade": "Guaianases",
+      "curso": "Farmácia",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "guaianases-radiologia-m-2026-10-15",
+      "regional": "São Paulo",
+      "unidade": "Guaianases",
+      "curso": "Radiologia",
+      "turno": "M",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-15"
+    },
+    {
+      "id": "guaianases-radiologia-n-2026-10-15",
+      "regional": "São Paulo",
+      "unidade": "Guaianases",
+      "curso": "Radiologia",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-15"
+    },
+    {
+      "id": "guaianases-seguranca-do-trabalho-n-2026-10-15",
+      "regional": "São Paulo",
+      "unidade": "Guaianases",
+      "curso": "Segurança do Trabalho",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-15"
+    },
+    {
+      "id": "guarulhos-enfermagem-m-2026-10-14",
+      "regional": "São Paulo",
+      "unidade": "Guarulhos",
+      "curso": "Enfermagem",
+      "turno": "M",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "guarulhos-enfermagem-n-2026-10-14",
+      "regional": "São Paulo",
+      "unidade": "Guarulhos",
+      "curso": "Enfermagem",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "guarulhos-enfermagem-t-2026-10-14",
+      "regional": "São Paulo",
+      "unidade": "Guarulhos",
+      "curso": "Enfermagem",
+      "turno": "T",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "guarulhos-enfermagem-complementacao-m-2026-10-15",
+      "regional": "São Paulo",
+      "unidade": "Guarulhos",
+      "curso": "Enfermagem Complementação",
+      "turno": "M",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-15"
+    },
+    {
+      "id": "guarulhos-enfermagem-complementacao-n-2026-10-15",
+      "regional": "São Paulo",
+      "unidade": "Guarulhos",
+      "curso": "Enfermagem Complementação",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-15"
+    },
+    {
+      "id": "guarulhos-estetica-n-2026-10-15",
+      "regional": "São Paulo",
+      "unidade": "Guarulhos",
+      "curso": "Estética",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-15"
+    },
+    {
+      "id": "guarulhos-radiologia-n-2026-10-14",
+      "regional": "São Paulo",
+      "unidade": "Guarulhos",
+      "curso": "Radiologia",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "itaquera-administracao-n-2026-10-14",
+      "regional": "São Paulo",
+      "unidade": "Itaquera",
+      "curso": "Administração",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "itaquera-desenvolvimento-de-sistemas-m-2026-10-14",
+      "regional": "São Paulo",
+      "unidade": "Itaquera",
+      "curso": "Desenvolvimento de Sistemas",
+      "turno": "M",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "itaquera-desenvolvimento-de-sistemas-n-2026-10-15",
+      "regional": "São Paulo",
+      "unidade": "Itaquera",
+      "curso": "Desenvolvimento de Sistemas",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-15"
+    },
+    {
+      "id": "itaquera-enfermagem-m-2026-10-15",
+      "regional": "São Paulo",
+      "unidade": "Itaquera",
+      "curso": "Enfermagem",
+      "turno": "M",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-15"
+    },
+    {
+      "id": "itaquera-enfermagem-n-2026-10-14",
+      "regional": "São Paulo",
+      "unidade": "Itaquera",
+      "curso": "Enfermagem",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "itaquera-enfermagem-t-2026-10-14",
+      "regional": "São Paulo",
+      "unidade": "Itaquera",
+      "curso": "Enfermagem",
+      "turno": "T",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "itaquera-enfermagem-complementacao-m-2026-10-14",
+      "regional": "São Paulo",
+      "unidade": "Itaquera",
+      "curso": "Enfermagem Complementação",
+      "turno": "M",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "itaquera-enfermagem-complementacao-n-2026-10-14",
+      "regional": "São Paulo",
+      "unidade": "Itaquera",
+      "curso": "Enfermagem Complementação",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "itaquera-enfermagem-complementacao-t-2026-10-15",
+      "regional": "São Paulo",
+      "unidade": "Itaquera",
+      "curso": "Enfermagem Complementação",
+      "turno": "T",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-15"
+    },
+    {
+      "id": "itaquera-estetica-n-2026-10-15",
+      "regional": "São Paulo",
+      "unidade": "Itaquera",
+      "curso": "Estética",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-15"
+    },
+    {
+      "id": "itaquera-radiologia-m-2026-10-14",
+      "regional": "São Paulo",
+      "unidade": "Itaquera",
+      "curso": "Radiologia",
+      "turno": "M",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "itaquera-radiologia-n-2026-10-15",
+      "regional": "São Paulo",
+      "unidade": "Itaquera",
+      "curso": "Radiologia",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-15"
+    },
+    {
+      "id": "itaquera-seguranca-do-trabalho-n-2026-10-14",
+      "regional": "São Paulo",
+      "unidade": "Itaquera",
+      "curso": "Segurança do Trabalho",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "jabaquara-administracao-n-2026-10-14",
+      "regional": "São Paulo",
+      "unidade": "Jabaquara",
+      "curso": "Administração",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "jabaquara-desenvolvimento-de-sistemas-n-2026-10-15",
+      "regional": "São Paulo",
+      "unidade": "Jabaquara",
+      "curso": "Desenvolvimento de Sistemas",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-15"
+    },
+    {
+      "id": "jabaquara-enfermagem-n-2026-10-14",
+      "regional": "São Paulo",
+      "unidade": "Jabaquara",
+      "curso": "Enfermagem",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "jabaquara-enfermagem-complementacao-m-2026-10-15",
+      "regional": "São Paulo",
+      "unidade": "Jabaquara",
+      "curso": "Enfermagem Complementação",
+      "turno": "M",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-15"
+    },
+    {
+      "id": "jabaquara-enfermagem-complementacao-n-2026-10-15",
+      "regional": "São Paulo",
+      "unidade": "Jabaquara",
+      "curso": "Enfermagem Complementação",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-15"
+    },
+    {
+      "id": "jabaquara-radiologia-n-2026-10-14",
+      "regional": "São Paulo",
+      "unidade": "Jabaquara",
+      "curso": "Radiologia",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "jabaquara-seguranca-do-trabalho-n-2026-10-14",
+      "regional": "São Paulo",
+      "unidade": "Jabaquara",
+      "curso": "Segurança do Trabalho",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "maua-administracao-n-2026-10-15",
+      "regional": "São Paulo",
+      "unidade": "Mauá",
+      "curso": "Administração",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-15"
+    },
+    {
+      "id": "maua-desenvolvimento-de-sistemas-n-2026-10-14",
+      "regional": "São Paulo",
+      "unidade": "Mauá",
+      "curso": "Desenvolvimento de Sistemas",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "maua-enfermagem-n-2026-10-14",
+      "regional": "São Paulo",
+      "unidade": "Mauá",
+      "curso": "Enfermagem",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "maua-enfermagem-complementacao-n-2026-10-15",
+      "regional": "São Paulo",
+      "unidade": "Mauá",
+      "curso": "Enfermagem Complementação",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-15"
+    },
+    {
+      "id": "maua-estetica-n-2026-10-14",
+      "regional": "São Paulo",
+      "unidade": "Mauá",
+      "curso": "Estética",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "maua-radiologia-n-2026-10-15",
+      "regional": "São Paulo",
+      "unidade": "Mauá",
+      "curso": "Radiologia",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-15"
+    },
+    {
+      "id": "maua-seguranca-do-trabalho-n-2026-10-15",
+      "regional": "São Paulo",
+      "unidade": "Mauá",
+      "curso": "Segurança do Trabalho",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-15"
+    },
+    {
+      "id": "santo-amaro-administracao-n-2026-10-15",
+      "regional": "São Paulo",
+      "unidade": "Santo Amaro",
+      "curso": "Administração",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-15"
+    },
+    {
+      "id": "santo-amaro-enfermagem-m-2026-10-15",
+      "regional": "São Paulo",
+      "unidade": "Santo Amaro",
+      "curso": "Enfermagem",
+      "turno": "M",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-15"
+    },
+    {
+      "id": "santo-amaro-enfermagem-n-2026-10-15",
+      "regional": "São Paulo",
+      "unidade": "Santo Amaro",
+      "curso": "Enfermagem",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-15"
+    },
+    {
+      "id": "santo-amaro-enfermagem-t-2026-10-14",
+      "regional": "São Paulo",
+      "unidade": "Santo Amaro",
+      "curso": "Enfermagem",
+      "turno": "T",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "santo-amaro-enfermagem-complementacao-m-2026-10-15",
+      "regional": "São Paulo",
+      "unidade": "Santo Amaro",
+      "curso": "Enfermagem Complementação",
+      "turno": "M",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-15"
+    },
+    {
+      "id": "santo-amaro-enfermagem-complementacao-n-2026-10-14",
+      "regional": "São Paulo",
+      "unidade": "Santo Amaro",
+      "curso": "Enfermagem Complementação",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "sao-miguel-administracao-n-2026-10-14",
+      "regional": "São Paulo",
+      "unidade": "São Miguel",
+      "curso": "Administração",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "sao-miguel-enfermagem-m-2026-10-14",
+      "regional": "São Paulo",
+      "unidade": "São Miguel",
+      "curso": "Enfermagem",
+      "turno": "M",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "sao-miguel-enfermagem-n-2026-10-14",
+      "regional": "São Paulo",
+      "unidade": "São Miguel",
+      "curso": "Enfermagem",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "sao-miguel-enfermagem-t-2026-10-15",
+      "regional": "São Paulo",
+      "unidade": "São Miguel",
+      "curso": "Enfermagem",
+      "turno": "T",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-15"
+    },
+    {
+      "id": "sao-miguel-enfermagem-complementacao-m-2026-10-15",
+      "regional": "São Paulo",
+      "unidade": "São Miguel",
+      "curso": "Enfermagem Complementação",
+      "turno": "M",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-15"
+    },
+    {
+      "id": "sao-miguel-enfermagem-complementacao-n-2026-10-14",
+      "regional": "São Paulo",
+      "unidade": "São Miguel",
+      "curso": "Enfermagem Complementação",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "sao-miguel-enfermagem-complementacao-t-2026-10-14",
+      "regional": "São Paulo",
+      "unidade": "São Miguel",
+      "curso": "Enfermagem Complementação",
+      "turno": "T",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "sao-miguel-radiologia-m-2026-10-14",
+      "regional": "São Paulo",
+      "unidade": "São Miguel",
+      "curso": "Radiologia",
+      "turno": "M",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "sao-miguel-radiologia-n-2026-10-14",
+      "regional": "São Paulo",
+      "unidade": "São Miguel",
+      "curso": "Radiologia",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-14"
+    },
+    {
+      "id": "sao-miguel-seguranca-do-trabalho-n-2026-10-15",
+      "regional": "São Paulo",
+      "unidade": "São Miguel",
+      "curso": "Segurança do Trabalho",
+      "turno": "N",
+      "aulaInaugural": "2026-10-07",
+      "primeiraAula": "2026-10-15"
     }
   ]
 }

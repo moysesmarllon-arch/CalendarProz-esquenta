@@ -2,6 +2,7 @@ import turmasData from './turmas.json';
 import cursosData from './cursos.json';
 
 export interface Turma {
+  id?: string;
   regional: string;
   unidade: string;
   curso: string;
@@ -67,6 +68,7 @@ export interface CertificadoRaw {
   cargaHoraria?: string | Record<string, string>;
   requisito?: string | Record<string, string>;
   impacto: string;
+  marcoNoCaminho?: boolean;
 }
 
 export interface CertificadoResolved {
@@ -76,6 +78,7 @@ export interface CertificadoResolved {
   cargaHoraria?: string;
   requisito?: string;
   impacto: string;
+  marcoNoCaminho?: boolean;
 }
 
 export interface Diploma {
@@ -95,6 +98,7 @@ export interface CursoData {
   id: string;
   nomesNaBase: string[];
   titulo: string;
+  subtitulo?: string;
   resumo: string;
   porRegional: Record<string, CursoPorRegional>;
   comoFunciona: string;
@@ -296,6 +300,7 @@ export const repository = {
         cargaHoraria: resolvedCh,
         requisito: resolvedReq,
         impacto: c.impacto,
+        marcoNoCaminho: c.marcoNoCaminho,
       });
     });
 
