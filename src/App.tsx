@@ -3,10 +3,27 @@ import { Turma, repository } from './data/repository';
 import { SelectorScreen } from './components/SelectorScreen';
 import { CalendarScreen } from './components/CalendarScreen';
 import { CookieBanner } from './components/CookieBanner';
-import { initGA4 } from './utils/analytics';
+
+function getInitialTurmaFromUrl(): Turma | null {
+  if (typeof window === 'undefined') return null;
+  try {
+    const params = new URLSearchParams(window.location.search);
+    const regional = params.get('regional');
+    const unidade = params.get('unidade');
+    const curso = params.get('curso');
+    const turno = params.get('turno');
+
+    if (regional && unidade && curso && turno) {
+      return repository.findTurma(regional, unidade, curso, turno) || null;
+    }
+  } catch {
+    // ignore
+  }
+  return null;
+}
 
 export default function App() {
-  const [selectedTurma, setSelectedTurma] = useState<Turma | null>(null);
+  const [selectedTurma, setSelectedTurma] = useState<Turma | null>(getInitialTurmaFromUrl);
   const [origem, setOrigem] = useState<'link' | 'selecao'>('link');
   const [showCookieBanner, setShowCookieBanner] = useState<boolean>(() => {
     const consent = repository.getAnalyticsConsent();
@@ -18,19 +35,25 @@ export default function App() {
     unidade: string;
     curso: string;
     turno: string;
-  }>({
-    regional: '',
-    unidade: '',
-    curso: '',
-    turno: '',
+  }>(() => {
+    const initial = getInitialTurmaFromUrl();
+    if (initial) {
+      return {
+        regional: initial.regional,
+        unidade: initial.unidade,
+        curso: initial.curso,
+        turno: initial.turno,
+      };
+    }
+    return {
+      regional: '',
+      unidade: '',
+      curso: '',
+      turno: '',
+    };
   });
 
-  // Inicializar GA4 (respeita recusa salva se houver)
-  useEffect(() => {
-    initGA4();
-  }, []);
-
-  // Parse URL query params
+  // Parse URL query params (usado em popstate ao voltar/avançar no navegador)
   const checkUrlParams = useCallback(() => {
     const params = new URLSearchParams(window.location.search);
     const regional = params.get('regional');
@@ -53,13 +76,11 @@ export default function App() {
       }
     }
 
-    // If params missing or invalid, stay on selector
+    // Se parâmetros incompletos ou ausentes, volta para a tela de seleção
     setSelectedTurma(null);
   }, []);
 
   useEffect(() => {
-    checkUrlParams();
-
     const handlePopState = () => {
       checkUrlParams();
     };
