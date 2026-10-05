@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Logo } from './Logo';
 import { repository } from '../data/repository';
 import { ChevronRight, MapPin, Building2, GraduationCap, Clock, AlertCircle } from 'lucide-react';
+import { trackPageView } from '../utils/analytics';
 
 interface SelectorScreenProps {
   initialRegional?: string;
@@ -9,6 +10,7 @@ interface SelectorScreenProps {
   initialCurso?: string;
   initialTurno?: string;
   onSelectTurma: (regional: string, unidade: string, curso: string, turno: string) => void;
+  onOpenCookiePreferences?: () => void;
 }
 
 export const SelectorScreen: React.FC<SelectorScreenProps> = ({
@@ -17,12 +19,17 @@ export const SelectorScreen: React.FC<SelectorScreenProps> = ({
   initialCurso = '',
   initialTurno = '',
   onSelectTurma,
+  onOpenCookiePreferences,
 }) => {
   const [regional, setRegional] = useState<string>(initialRegional);
   const [unidade, setUnidade] = useState<string>(initialUnidade);
   const [curso, setCurso] = useState<string>(initialCurso);
   const [turno, setTurno] = useState<string>(initialTurno);
   const [formError, setFormError] = useState<string | null>(null);
+
+  useEffect(() => {
+    trackPageView('Encontre sua turma');
+  }, []);
 
   const regionais = repository.getRegionais();
   const unidades = regional ? repository.getUnidades(regional) : [];
@@ -254,8 +261,17 @@ export const SelectorScreen: React.FC<SelectorScreenProps> = ({
       </main>
 
       {/* Footer */}
-      <footer className="text-center py-4 border-t border-[#EFEFEF]/60 text-xs text-[#5D5F69]">
-        Proz Educação • Calendário de Aulas 2026
+      <footer className="text-center py-4 border-t border-[#EFEFEF]/60 text-xs text-[#5D5F69] space-y-1.5">
+        <p>Proz Educação • Calendário de Aulas 2026</p>
+        {onOpenCookiePreferences && (
+          <button
+            type="button"
+            onClick={onOpenCookiePreferences}
+            className="text-[11px] text-[#5D5F69] hover:text-[#8C52FF] underline transition-colors cursor-pointer"
+          >
+            Preferências de cookies
+          </button>
+        )}
       </footer>
     </div>
   );

@@ -1469,5 +1469,9 @@
       "aulaInaugural": "2026-10-07",
       "primeiraAula": "2026-10-15"
     }
-  ]
+  ],
+  "analytics": {
+    "ga4Id": "G-FRLX3KN3NE",
+    "politicaPrivacidadeUrl": "https://prozeducacao.com.br/politica-de-privacidade/"
+  }
 }

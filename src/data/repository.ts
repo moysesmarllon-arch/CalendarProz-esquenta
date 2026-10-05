@@ -34,6 +34,11 @@ export interface UnidadeInfo {
   endereco: string;
 }
 
+export interface AnalyticsConfig {
+  ga4Id: string;
+  politicaPrivacidadeUrl: string;
+}
+
 export interface TurmasConfig {
   versao: string;
   periodoVisivel: PeriodoVisivel;
@@ -44,6 +49,7 @@ export interface TurmasConfig {
   diasSemAula: DiaSemAula[];
   confirmarComUnidade: ConfirmarComUnidade[];
   turmas: Turma[];
+  analytics?: AnalyticsConfig;
 }
 
 // Interfaces de Cursos
@@ -329,5 +335,31 @@ export const repository = {
     const hasEnf = cursosList.some((c) => c.trim().toLowerCase() === 'enfermagem');
     const hasComp = cursosList.some((c) => c.trim().toLowerCase() === 'enfermagem complementação');
     return hasEnf && hasComp;
+  },
+
+  getAnalyticsConfig(): AnalyticsConfig | undefined {
+    return turmasConfig.analytics;
+  },
+
+  getAnalyticsConsent(): { status: 'ok' | 'recusado'; date: string } | null {
+    try {
+      const raw = localStorage.getItem('proz-analytics');
+      if (!raw) return null;
+      if (raw.startsWith('{')) {
+        return JSON.parse(raw);
+      }
+      return { status: raw as 'ok' | 'recusado', date: new Date().toISOString() };
+    } catch {
+      return null;
+    }
+  },
+
+  setAnalyticsConsent(status: 'ok' | 'recusado'): void {
+    try {
+      const payload = { status, date: new Date().toISOString() };
+      localStorage.setItem('proz-analytics', JSON.stringify(payload));
+    } catch {
+      // ignore
+    }
   },
 };

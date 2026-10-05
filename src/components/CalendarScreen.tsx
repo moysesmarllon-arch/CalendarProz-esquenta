@@ -23,13 +23,30 @@ import {
   X,
   BookOpen,
 } from 'lucide-react';
+import {
+  trackPageView,
+  trackVerCalendario,
+  trackTrocarAba,
+  trackBaixarAgenda,
+  trackGoogleAgenda,
+  trackWhatsappClique,
+  trackVerMapa,
+  trackCompartilhar,
+} from '../utils/analytics';
 
 interface CalendarScreenProps {
   turma: Turma;
+  origem?: 'link' | 'selecao';
   onBackToSelector: () => void;
+  onOpenCookiePreferences?: () => void;
 }
 
-export const CalendarScreen: React.FC<CalendarScreenProps> = ({ turma, onBackToSelector }) => {
+export const CalendarScreen: React.FC<CalendarScreenProps> = ({
+  turma,
+  origem = 'link',
+  onBackToSelector,
+  onOpenCookiePreferences,
+}) => {
   const [selectedDay, setSelectedDay] = useState<DayScheduleItem | null>(null);
   const [copiedLink, setCopiedLink] = useState(false);
   const [showIcsInstructions, setShowIcsInstructions] = useState(false);
@@ -53,14 +70,33 @@ export const CalendarScreen: React.FC<CalendarScreenProps> = ({ turma, onBackToS
   useEffect(() => {
     const handlePopState = () => {
       const params = new URLSearchParams(window.location.search);
-      setActiveTab(params.get('aba') === 'curso' ? 'curso' : 'calendario');
+      const tab = params.get('aba') === 'curso' ? 'curso' : 'calendario';
+      setActiveTab(tab);
+      trackTrocarAba(tab);
+      trackPageView(tab === 'curso' ? 'Meu curso' : 'Calendário');
     };
     window.addEventListener('popstate', handlePopState);
     return () => window.removeEventListener('popstate', handlePopState);
   }, []);
 
+  // Evento inicial: ver_calendario e page_view
+  useEffect(() => {
+    trackVerCalendario(
+      {
+        regional: turma.regional,
+        unidade: turma.unidade,
+        curso: turma.curso,
+        turno: turma.turno,
+      },
+      origem
+    );
+    trackPageView(activeTab === 'curso' ? 'Meu curso' : 'Calendário');
+  }, []);
+
   const handleTabChange = (tab: 'calendario' | 'curso') => {
     setActiveTab(tab);
+    trackTrocarAba(tab);
+    trackPageView(tab === 'curso' ? 'Meu curso' : 'Calendário');
     const url = new URL(window.location.href);
     if (tab === 'curso') {
       url.searchParams.set('aba', 'curso');
@@ -123,6 +159,7 @@ export const CalendarScreen: React.FC<CalendarScreenProps> = ({ turma, onBackToS
   }, [activeTab]);
 
   const handleCopyLink = async () => {
+    trackCompartilhar(turma);
     try {
       await navigator.clipboard.writeText(window.location.href);
       setCopiedLink(true);
@@ -134,6 +171,7 @@ export const CalendarScreen: React.FC<CalendarScreenProps> = ({ turma, onBackToS
   };
 
   const handleDownloadIcs = () => {
+    trackBaixarAgenda(turma);
     downloadTurmaIcs(turma);
     setShowIcsInstructions(true);
   };
@@ -230,6 +268,7 @@ export const CalendarScreen: React.FC<CalendarScreenProps> = ({ turma, onBackToS
                 href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(endereco)}`}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackVerMapa({ regional: turma.regional, unidade: turma.unidade })}
                 className="inline-flex items-center gap-1 text-[#8C52FF] font-bold hover:text-[#593493] underline"
               >
                 Ver no mapa
@@ -346,6 +385,7 @@ export const CalendarScreen: React.FC<CalendarScreenProps> = ({ turma, onBackToS
                         href={googleCalUrl}
                         target="_blank"
                         rel="noopener noreferrer"
+                        onClick={() => trackGoogleAgenda(turma)}
                         className="inline-flex items-center gap-1.5 text-xs font-bold text-[#8C52FF] hover:text-[#593493] underline transition-colors"
                       >
                         <CalendarIcon className="w-3.5 h-3.5 text-[#8C52FF]" />
@@ -409,11 +449,22 @@ export const CalendarScreen: React.FC<CalendarScreenProps> = ({ turma, onBackToS
         )}
 
         {/* Discreto aviso de rodapé */}
-        <div className="flex items-start justify-center gap-2 text-center text-xs text-[#5D5F69] px-4 py-2">
-          <AlertCircle className="w-4 h-4 text-[#FF7F00] shrink-0 mt-0.5" />
-          <p className="leading-relaxed">
-            Calendário sujeito a ajustes. Em caso de dúvida, a sua unidade é a fonte oficial.
-          </p>
+        <div className="flex flex-col items-center justify-center gap-1.5 text-center text-xs text-[#5D5F69] px-4 py-2">
+          <div className="flex items-start justify-center gap-2">
+            <AlertCircle className="w-4 h-4 text-[#FF7F00] shrink-0 mt-0.5" />
+            <p className="leading-relaxed">
+              Calendário sujeito a ajustes. Em caso de dúvida, a sua unidade é a fonte oficial.
+            </p>
+          </div>
+          {onOpenCookiePreferences && (
+            <button
+              type="button"
+              onClick={onOpenCookiePreferences}
+              className="text-[11px] text-[#5D5F69] hover:text-[#8C52FF] underline transition-colors cursor-pointer mt-1"
+            >
+              Preferências de cookies
+            </button>
+          )}
         </div>
       </main>
 
@@ -439,6 +490,7 @@ export const CalendarScreen: React.FC<CalendarScreenProps> = ({ turma, onBackToS
             href={waUrl}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackWhatsappClique(turma)}
             className="w-full xs:w-auto flex-1 xs:flex-initial py-3 px-5 rounded-[10px] bg-[#FF7F00] text-[#FFFFFF] font-bold text-sm flex items-center justify-center gap-2 hover:opacity-95 active:scale-[0.99] transition-all shadow-xs"
           >
             <MessageCircle className="w-4 h-4 fill-[#FFFFFF]" />
